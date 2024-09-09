@@ -8,7 +8,7 @@
 div.box {
     background-color:rgb(250, 222, 222);
     border-color: rgb(224, 62, 62);
-    padding:0 5%
+    /* padding:0 5% */
 }
 div.box {
     margin: 1.5rem 0;
@@ -17,11 +17,6 @@ div.box {
 }
 .cstyle {
     background-color:rgb(224, 62, 62); ;
-    --VARIABLE-BOX-CAPTION-color: var(--INTERNAL-BOX-CAPTION-color);
-    --VARIABLE-BOX-BG-color: rgb(255, 255, 255);
-    --VARIABLE-BOX-TEXT-color:rgb(29, 27, 26);
-    -webkit-print-color-adjust: exact;
-    color-adjust: exact;
 }
 div.box > .box-label {
     color: rgb(250, 222, 222);
@@ -32,11 +27,23 @@ div.box > .box-label {
     padding: .2rem .6rem;
     
 }
-div.box > .box-label {
-    font-weight: 500;
-    padding: .2rem .6rem;
-    
-}
 .warning{
 background-color:rgb(224, 62, 62);
+}
+
+.paddingside2 {
+    padding: 0% 2%;
+}
+
+.boxcontentnote {
+    background-color: rgb(252, 238, 214) !important
+   
+}
+.boxbglabelnote{
+  
+    background-color:rgb(237, 153, 9)
+}
+
+.bordernotice{
+   border-color: rgb(255, 180, 9)
 }
