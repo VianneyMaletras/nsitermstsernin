@@ -52,3 +52,6 @@ background-color:rgb(224, 62, 62);
 .bordernotice{
    border-color: rgb(255, 180, 9)
 }
+.padleft10px{
+    padding-left: 10px;
+}
