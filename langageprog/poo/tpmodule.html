@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Principes POO</title>
+  <title>TP modularite</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -37,7 +37,7 @@
   
   <!-- and it's easy to individually load additional languages -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
->
+
 </head>
 
 <body>
@@ -56,7 +56,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
+          <!-- <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li> -->
 
           <li><a class="nav-link scrollto" href="#annexes">Annexes</a></li>
           <!-- <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
@@ -76,7 +76,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Principes de la POO </h2>
+          <h2 class="animate__animated animate__fadeInDown">Tp sur la modularité </h2>
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
         </div>
       </div> <!---->
@@ -169,144 +169,74 @@
         </p>
       </div>
     </section>
-    <!-- ======= Resume Section ======= -->
-    <section id="resume" class="about">
-      <div class="container">
+   
+   
+ <!-- ======= Annexes Section ======= -->
+ <section id="annexes" class="pricing">
+  <div class="container">
 
-        <div class="section-title" data-aos="zoom-out">
-          <!-- <h2>Resumé du cours à venir</h2>-->
-          <h2>Resumé du cours</h2>
-          <p>Programmation Orientée Objet
-          <ul> Un objet:
+     <div class="section-title" data-aos="zoom-out">
+      <h2>Annexes</h2>
 
-            <li>représente une entité physique, un concept…</li>
-            <li>est autonome,</li>
-            <li>peut interagir avec les autres objets.</li>
+    </div>
+    <div class="section-title" data-aos="zoom-out">
+      <h3 id="liens">Liens</h3>
+
+    </div>
+    <div class="row">
+        
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Lien vers le notebook</h3>
+          <ul> Sur Capytale
+
+            <!-- <li>Nec feugiat nisl</li>
+            <li>Nulla at volutpat dola</li>
+            <li class="na">Pharetra massa</li>
+            <li class="na">Massa ultricies mi</li> -->
           </ul>
-          La POO consiste à réunir les données caractérisant un objet et leur traitement, dans une unité autonome. On
-          parle <b>d’encapsulation.</b></p>
-        </div>
-        <div class="box notices cstyle warning">
-          <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
-          <div class="box-content">
-            <p class="paddingside2">Une <strong>classe</strong> est une modélisation d’un élément du monde réel. <br />
-              Une classe possède:</p>
-            <ul>
-              <li><strong>des attributs</strong>: il s’agit des caractéristiques spécifiques de l’objet (données),</li>
-              <li><strong>des méthodes</strong>: il s’agit des fonctionnalités que peut réaliser l’objet (traitements et
-                services).</li>
-            </ul>
+
+
+          <div class="btn-wrap">
+            <a href="https://capytale2.ac-paris.fr/web/c/b4cc-3904009" class="btn-buy">Y aller</a>
           </div>
         </div>
+      </div>
 
-      
-        <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-          <pre>
-            <code class="langage-python">
-          class Roche:
-              def __init__(self, x: int, y: int):
-                  self.x = x
-                  self.y = y
-                  self.durete = randint(50, 100)
-          
-              def get_x(self) -> int:
-                  return self.x
-          
-              def get_y(self) -> int:
-                  return self.y
-          
-              def get_durete(self) -> int:
-                  return self.durete
-          
-              def set_x(self, x: int) -> None:
-                  self.x = x
-          
-              def set_y(self, y: int) -> None:
-                  self.y = y
-          
-              def diminuer_durete(self, impact: int) -> None:
-                  if self.durete > 0:
-                      self.durete = self.durete - impact
-                  if self.durete < 0:
-                      self.durete = 0
-                </code></pre>
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Une autre manière d'expliquer</h3>
+          <h4></h4>
+          <ul>
+            <li>Apprendre la POO avec Graven</li>
+          </ul>
+                       
+        <div class="btn-wrap">
+          <a href="#https://www.youtube.com/watch?v=dfUM_9xibf8" class="btn-buy">Cliquez-ici</a>
+        </div> 
         </div>
-
-
-        <p>Certaines méthodes (les <b>accesseurs</b> et <b> mutateurs</b>) permettent de manipuler les attributs d’un objet.</p>
-        
-        <div class="box notices cstyle warning">
-          <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
-          <div class="box-content">
-            <p class="paddingside2">Une <b>instance</b> est une construction concrète, produite à partir de l’objet modèle. L’instance est manipulable dans le programme.
-            </ul>
-          </div>
-        </div>
-        <img class="maxwidth500px" src="./ressource/instances.png" alt="" text="Instance ">
-      
-        <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-          <pre><code class="langage-python">
-bloc_0 = Roche(0, 0)
-bloc_1 = Roche(0, 1)
-            </code>
-          </pre>
-        </div>
-        
-       
+      </div>
+      <div class="section-title" data-aos="zoom-out">
+        <h3 id="pj">Pièces jointes</h3>
 
       </div>
-    </section><!-- End resume Section -->
 
-   
+    <div class="row">
+      
 
-      <!-- ======= annexes Section ======= -->
-      <section id="annexes" class="pricing">
-        <div class="container">
-
-          <div class="section-title" data-aos="zoom-out">
-            <h2>Annexes</h2>
-            <p>Doc pdf</p>
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Le fichier du notebook </h3>
+          <ul>Utilisable avec jupyter          </ul>
+          <div class="btn-wrap">
+            <a target="_blank" href="ressource/Exercices POO.zip" class="btn-buy">Télécharger</a>
           </div>
-
-          <div class="row">
-
-            <div class="col-lg-3 col-md-6">
-              <div class="box" data-aos="zoom-in">
-                <h3>Le résumé en pdf</h3>
-                <ul>
-                  <li>Il s'agit de cette page exportée en pdf</li>
-                  <!-- <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li> -->
-                </ul>
-
-
-                <div class="btn-wrap">
-                  <a href="./ressource/principepooresume.pdf" class="btn-buy">Télécharger</a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="col-lg-3 col-md-6">
-              <div class="box" data-aos="zoom-in">
-                <h3>Une autre manière d'expliquer</h3>
-                <h4></h4>
-                <ul>
-                  <li>Apprendre la POO avec Graven</li>
-                </ul>
-                             
-              <div class="btn-wrap">
-                <a href="#https://www.youtube.com/watch?v=dfUM_9xibf8" class="btn-buy">Cliquez-ici</a>
-              </div> 
-              </div>
-            </div>
-
-
-          </div>
-
         </div>
-      </section><!-- End Pricing Section -->
+      </div>
+    </div>
+
+</section><!-- End Annexes Section -->
+ 
 
   </div>
 
