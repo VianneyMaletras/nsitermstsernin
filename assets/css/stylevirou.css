@@ -84,6 +84,16 @@ background-color:rgb(224, 62, 62);
 }
 pre code.hljs {
 
-    background-color: #282a36 ;
-    color: #d6e4e5;
+    background-color: #000000 ;
+    color: #ffffff;
+}
+.hljs-section, .hljs-title {
+    color: #e98181!important;
+    font-weight: 700;
+}
+.hljs-deletion, .hljs-number, .hljs-quote, .hljs-selector-class, .hljs-selector-id, .hljs-string, .hljs-template-tag, .hljs-type {
+    color: #e98181!important;
+}
+code{
+    text-align: start;
 }
