@@ -32,7 +32,12 @@ background-color:rgb(224, 62, 62);
 .paddingside2 {
     padding: 0% 2%;
 }
-
+.paddingside5 {
+    padding: 0% 5%;
+}
+.paddingside7 {
+    padding: 0% 7%;
+}
 .boxcontentnote {
     background-color: rgb(252, 238, 214) !important;
     border-color: rgb(237, 153, 9);
@@ -96,4 +101,10 @@ pre code.hljs {
 }
 code{
     text-align: start;
+}
+
+.examliste{
+        list-style: inside!important;
+        padding: 0;
+    
 }

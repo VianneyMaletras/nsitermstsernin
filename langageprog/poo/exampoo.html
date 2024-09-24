@@ -34,7 +34,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  
+
   <!-- and it's easy to individually load additional languages -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
 
@@ -56,13 +56,13 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#resume">Consignes</a></li> 
+          <li><a class="nav-link scrollto" href="#resume">Consignes</a></li>
 
-            <li class="dropdown"><a href=""><span>Annexes</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href=""><span>Annexes</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-             <li><a href="#liens">Liens</a></li>
-              <li><a href="#pj">Pieces Jointes</a></li>
-       
+              <li><a href="#liens">Documentation</a></li>
+              <li><a href="#pj">Pièces Jointes</a></li>
+
             </ul>
           </li>
           <!-- <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
@@ -101,7 +101,7 @@
             <th class="padleft10px">
               Capacités attendues
             </th>
-            <th class="padleft10px"> Commentaires</th> 
+            <th class="padleft10px"> Commentaires</th>
           </thead>
           <tbody>
             <tr>
@@ -109,199 +109,234 @@
               <td class="padleft10px">Distinguer sur des exemples les paradigmes impératif, fonctionnel et objet.
                 <br />
               </td>
-               <td class="padleft10px">Choisir le paradigme de programmation selon le champ d’application d’un programme. Avec un même langage de programmation, on peut utiliser des paradigmes différents. Dans un même programme, on peut utiliser des paradigmes différents.</td>
+              <td class="padleft10px">Choisir le paradigme de programmation selon le champ d’application d’un programme.
+                Avec un même langage de programmation, on peut utiliser des paradigmes différents. Dans un même
+                programme, on peut utiliser des paradigmes différents.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
-   
-   <!-- ======= Resume Section ======= -->
-   <section id="resume" class="features">
-    <div class="container">
 
-      <ul class="nav nav-tabs row d-flex">
-        <li class="nav-item col-3" data-aos="zoom-in">
-          <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-            <i class="fa-solid fa-ear-listen"></i>
-            <h4 class="d-none d-lg-block">Resumé</h4>
-          </a>
-        </li>
-  
-      </ul>
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="features">
+      <div class="container">
 
-      <div class="tab-content" data-aos="fade-up">
-        <div class="tab-pane active show" id="tab-1">
-          <div class="row">
-            <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 text-center">
-              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full justifier">
-                <h3>Résumé</h3>
-                L’objectif de l’exercice est d’implémenter un mini réseau social.
-                <ol>
-                <li>Télécharger l’annexe et extraire le dossier reseau-social-eleve. Il est composé de trois fichiers. Le fichier test.py est le programme principal. Il présente un scénario de création du réseau social en utilisant les classes qui seront construites dans les autres fichiers.
-                </li>
-                </ol>
+        <ul class="nav nav-tabs row d-flex">
+          <li class="nav-item col-3" data-aos="zoom-in">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+              <i class="fa-solid fa-ear-listen"></i>
+              <h4 class="d-none d-lg-block">Consigne</h4>
+            </a>
+          </li>
 
-                <div class="box notices cstyle warning">
-                  <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
-                  <div class="box-content">
-                    <p class="paddingside2 justifier">
+        </ul>
 
-                      À la fin du développement, l’exécution du fichier <b> test</b> ne doit lever aucune erreur d’assertion.
-                      
-                    </p>
-                  </div>
-                </div><!-- fin box warning-->
-<ol start="2">
-                <li>Dans le fichier <b>utilisateur.py</b>, compléter la classe <b>Utilisateur</b> avec:</li></ol>
-<ul> son constructeur qui acceptera trois paramètres:
+        <div class="tab-content" data-aos="fade-up">
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 text-center">
+                <div
+                  class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full justifier">
+                  <h3>Consigne</h3>
+                  L’objectif de l’exercice est d’implémenter un mini réseau social.
+                  <ol>
+                    <li>Télécharger <b>l’annexe et extraire le dossier reseau-social-eleve</b>. Il est composé de trois
+                      fichiers. <br>Le fichier <b>test.py</b> est le programme principal. Il présente un scénario de création du
+                      réseau social en utilisant les classes qui seront construites dans les autres fichiers.
+                    </li>
+                  </ol>
 
-<li>- une chaîne de caractère: le pseudo de l’utilisateur,</li>
-<li>- une chaîne de caractère: le mot de passe de l’utilisateur,</li>
-<li>- un entier: l’année de naissance de l’utilisateur.</li>
+                  <div class="box notices cstyle warning">
+                    <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
+                    <div class="box-content">
+                      <p class="paddingside2 justifier">
+
+                        À la fin du développement, l’exécution du fichier <b> test</b> ne doit lever aucune erreur
+                        d’assertion.
+
+                      </p>
+                    </div>
+                  </div><!-- fin box warning-->
+                  <ol start="2">
+                    <li>Dans le fichier <b>utilisateur.py</b>, compléter la classe <b>Utilisateur</b> avec:</li>
+                  </ol>
+                  <ul class="examliste">
+                    <span>&#x261B;</span> son constructeur qui acceptera trois paramètres:
+
+                    <li class="paddingside2"> une chaîne de caractère: le pseudo de l’utilisateur,</li>
+                    <li class="paddingside2"> une chaîne de caractère: le mot de passe de l’utilisateur,</li>
+                    <li class="paddingside2"> un entier: l’année de naissance de l’utilisateur.</li>
+                  </ul>
+                  Ces trois paramètres initialiseront trois attributs: <b>pseudo, mdp, naissance</b>. Enfin un quatrième
+                  attribut amis référencera un tableau vide.
+<ul class="examliste">
+  <span>&#x261B;</span> trois accesseurs:
+
+                 <li class="paddingside2"> get_pseudo</li>
+                 <li class="paddingside2">get_mdp</li>
+                 <li class="paddingside2">get_naissance</li>
 </ul>
-Ces trois paramètres initialiseront trois attributs: pseudo, mdp, naissance. Enfin un quatrième attribut amis référencera un tableau vide.
+<span>&#x261B;</span>un mutateur: <b>set_mdp</b> qui permettra de modifier le mot de passe <b>seulement si le nouveau mot de passe a
+                  une longueur supérieure ou égale à 10.<br>
+                  </b> Cette méthode renverra <b>True</b> si le mot de passe a été modifié,
+                  <b>False</b> sinon.<br/><br/>
 
-trois accesseurs:
+                  <span>&#x261B;</span>une méthode <b>ajouter_ami</b> qui acceptera une <b>instance d’Utilisateur</b> pour paramètre. Cette méthode
+                  ajoutera l’ami dans l’attribut <b>amis</b> seulement s’il n’est pas déjà présent dans le tableau. La méthode
+                  renverra une chaîne de caractère:
+                  <ul class="examliste">
+                  <li class="paddingside2">si l’ajout est effectué: <b>pseudo</b> est ton nouvel ami.</li>
+                  <li class="paddingside2">sinon: <b>pseudo</b> est déjà ton ami.</li>
+                  </ul>
+</ul>
+               
+           
 
-get_pseudo
-get_mdp
-get_naissance
-un mutateur: set_mdp qui permettra de modifier le mot de passe seulement si le nouveau mot de passe a une longueur supérieure ou égale à 10. Cette méthode renverra True si le mot de passe a été modifié, False sinon.
+              <div class="box notices cstyle warning">
+                <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
+                <div class="box-content">
+                  <p class="paddingside2 justifier">
+                    La syntaxe des chaînes de caractère doit être respectée <b>strictement</b> pour pouvoir passer les
+                    tests.
+                  </p>
+                </div>
+              </div><!-- fin box warning-->
 
-une méthode ajouter_ami qui acceptera une instance d’Utilisateur pour paramètre. Cette méthode ajoutera l’ami dans l’attribut amis seulement s’il n’est pas déjà présent dans le tableau. La méthode renverra une chaîne de caractère:
-
-si l’ajout est effectué: pseudo est ton nouvel ami.
-sinon: pseudo est déjà ton ami.</li>
-              </div>
-              </div>
-              <div class="col-lg-6 order-1 order-lg-2 text-center">
-                <div class="box notices cstyle warning">
-                  <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
-                  <div class="box-content">
-                    <p class="paddingside2 justifier">
-                      La syntaxe des chaînes de caractère doit être respectée <b>strictement</b> pour pouvoir passer les tests.
-                    </p>
-                  </div>
-                </div><!-- fin box warning-->
-              </div>
-
+       
               <ol start="3">
-                Dans le fichier reseau.py, construire la classe Reseau avec:
-
+               3. Dans le fichier <b>reseau.py</b>, construire la classe <b>Reseau</b> avec:</ol>
+                <ul class="examliste">
+                  <li class="paddingside2">
                 son constructeur, sans paramètre, mais avec un attribut utilisateurs, qui référencera un tableau vide.
-                
-                une méthode get_utilisateur qui acceptera un paramètre: un pseudo d’utilisateur. Cette méthode renverra l’instance d’Utilisateur correspondant au pseudo et présente dans le tableau utilisateurs. Elle renverra None s’il n’est pas présent.
-                
-                une méthode existe qui acceptera un paramètre: un pseudo d’utilisateur. Cette méthode renverra True si l’utilisateur est présent dans le tableau utilisateurs, False sinon.
-                
-                une méthode inscrire qui acceptera trois paramètres:
-                
-                une chaîne de caractère: le pseudo de l’utilisateur,
-                
-                une chaîne de caractère: le mot de passe de l’utilisateur,
-                
-                un entier: l’année de naissance de l’utilisateur.
-                
-                Cette méthode renverra une chaîne de caractère:
-                
-                si le pseudo existe déjà dans le tableau des utilisateurs: pseudo est déjà inscrit.
-                si la personne est trop jeune: pseudo est trop jeune.
-                si la personne est éligible, on ajoutera ce nouvel utilisateur dans le tableau utilisateurs et on renverra: pseudo est maintenant inscrit. </ol>
-        
-                <div class="box notices cstyle warning">
-                  <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
-                  <div class="box-content">
-                    <p class="paddingside2 justifier">
-                      Pour vérifier l’âge de la personne, on se contentera de regarder l’année de naissance. Un utilisateur pourra s’inscrire s’il a 15 ans ou plus. On utilisera la documentation ci-dessous pour déterminer l’année en cours.
-                    </p>
-                  </div>
-                </div><!-- fin box warning-->
-        <ol start="4">
-                À l’aide d’un commentaire dans le fichier test.py expliquer ce qu’il se passe lors de l’exécution de la dernière ligne du fichier:
+</li>
+<li class="paddingside2">une méthode get_utilisateur qui acceptera un paramètre: un pseudo d’utilisateur. Cette méthode renverra
+                l’instance d’Utilisateur correspondant au pseudo et présente dans le tableau utilisateurs. Elle renverra
+                None s’il n’est pas présent.</li>
+
+                <li class="paddingside2">une méthode existe qui acceptera un paramètre: un pseudo d’utilisateur. Cette méthode renverra True si
+                l’utilisateur est présent dans le tableau utilisateurs, False sinon.
+                </li>
+                <li class="paddingside2"> une méthode inscrire qui acceptera trois paramètres:
+
+                  <li class="paddingside5">une chaîne de caractère: le pseudo de l’utilisateur,</li>
+
+                  <li class="paddingside5"> une chaîne de caractère: le mot de passe de l’utilisateur,</li>
+
+                    <li class="paddingside5">un entier: l’année de naissance de l’utilisateur.</li>
+
+                      <li class="paddingside5">Cette méthode renverra une chaîne de caractère:</li>
+
+                 <li class="paddingside7">si le pseudo existe déjà dans le tableau des utilisateurs: pseudo est déjà inscrit.</li>
+                 <li class="paddingside7">si la personne est trop jeune: pseudo est trop jeune.</li>
+                 <li class="paddingside7">si la personne est éligible, on ajoutera ce nouvel utilisateur dans le tableau utilisateurs et on
+                renverra: pseudo est maintenant inscrit. </li></ol>
+
+              <div class="box notices cstyle warning">
+                <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
+                <div class="box-content">
+                  <p class="paddingside2 justifier">
+                    Pour vérifier l’âge de la personne, on se contentera de regarder l’année de naissance. Un
+                    utilisateur pourra s’inscrire s’il a 15 ans ou plus. On utilisera la documentation ci-dessous pour
+                    déterminer l’année en cours.
+                  </p>
+                </div>
+              </div><!-- fin box warning-->
+              <ol start="4">
+                4. À l’aide d’un commentaire dans le fichier test.py expliquer ce qu’il se passe lors de l’exécution de la
+                dernière ligne du fichier:
                 <pre>
                   <code class="langage-python">
                 assert not prof.set_mdp("12345")
               </code></pre>
               </ol>
               <ol start="5">
-              Renommer le dossier sous le nom eval_poo_votre_nom (sans accent, sans espace), le compresser et le déposer dans le casier numérique.
-              
-            </ol>  
+                5. Renommer le dossier sous le nom eval_poo_votre_nom (sans accent, sans espace), le compresser et le
+                déposer dans le casier numérique.
+
+              </ol>
             </div><!--fin row-->
-        
-        </div><!-- fin tabpane-->
-        
-          
 
-          </div><!-- fin tabcontent-->
-        </div><!-- fin container-->
-        
-  </section>
-  <!-- End Resume Section -->
-   
- <!-- ======= Annexes Section ======= -->
- <section id="annexes" class="pricing">
-  <div class="container">
+          </div><!-- fin tabpane-->
 
-     <div class="section-title" data-aos="zoom-out">
-      <h2>Annexes</h2>
 
-    </div>
-    <div class="section-title" data-aos="zoom-out">
-      <h3 id="liens">Documentation</h3>
 
-    </div>
-    <div class="row">
-        
-      <div class="col-lg-3 col-md-6">
-        <div class="box" data-aos="zoom-in">
-          <h3>classmethod datetime.today()</h3>
-          <ul> Return the current local datetime, with tzinfo None.
-          </ul>
+        </div><!-- fin tabcontent-->
+      </div><!-- fin container-->
 
-          datetime.today()
-          datetime.datetime(2023, 9, 7, 14, 33, 20, 515979)
+    </section>
+    <!-- End Resume Section -->
+
+    <!-- ======= Annexes Section ======= -->
+    <section id="annexes" class="pricing">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Annexes</h2>
+
         </div>
-      </div>
+        <div class="section-title" data-aos="zoom-out">
+          <h3 id="liens">Documentation</h3>
 
-      <div class="col-lg-3 col-md-6">
-        <div class="box" data-aos="zoom-in">
-          <h3>year</h3>
-        
-          <ul>
-            Extract the year from a datetime's instance
-          </ul>
-          >>> maintenant = datetime.today()
-          >>> maintenant.year
-          2024
-       
         </div>
-      </div>
-      <div class="section-title" data-aos="zoom-out">
-        <h3 id="pj">Pièces jointes</h3>
+        <div class="row">
 
-      </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="box" data-aos="zoom-in">
+              <h3>classmethod datetime.today()</h3>
+              <ul> Return the current local datetime, with tzinfo None.
+              </ul>
+              <pre>
+                <code class="langage-python">
+datetime.today()
+datetime.datetime(2023, 9, 7, 14, 33, 20, 515979)
+            </code></pre>
+            </div>
+          </div>
 
-    <div class="row">
-      
+          <div class="col-lg-3 col-md-6">
+            <div class="box" data-aos="zoom-in">
+              <h3>year</h3>
 
-    
-      <div class="col-lg-3 col-md-6">
-        <div class="box" data-aos="zoom-in">
-        <h3>Le code  </h3>
-        <ul>Pour démarrer        </ul>
-        <div class="btn-wrap">
-          <a target="_blank" href="ressource/reseau-social-eleve.zip" class="btn-buy">Télécharger</a>
+              <ul>
+                Extract the year from a datetime's instance
+              </ul>
+              <pre>
+                <code class="langage-python">
+>>> maintenant = datetime.today()
+>>> maintenant.year
+2024
+            </code></pre>
+              
+              
+              
+
+            </div>
+          </div>
+          <div class="section-title" data-aos="zoom-out">
+            <h3 id="pj">Pièces jointes</h3>
+
+          </div>
+
+          <div class="row">
+
+
+
+            <div class="col-lg-3 col-md-6">
+              <div class="box" data-aos="zoom-in">
+                <h3>Le code </h3>
+                <ul>Pour démarrer </ul>
+                <div class="btn-wrap">
+                  <a target="_blank" href="ressource/reseau-social-eleve.zip" class="btn-buy">Télécharger</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    </div>
-    </div>
-</section><!-- End Annexes Section -->
- 
+    </section><!-- End Annexes Section -->
 
-  </div>
+
+    </div>
 
   </main><!-- End #main -->
 
