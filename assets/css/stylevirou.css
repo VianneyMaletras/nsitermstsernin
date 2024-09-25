@@ -108,3 +108,12 @@ code{
         padding: 0;
     
 }
+
+
+
+.maxwidth50 {
+    max-width: 50%;
+}
+.maxwidth90{
+    max-width: 90%;
+}
