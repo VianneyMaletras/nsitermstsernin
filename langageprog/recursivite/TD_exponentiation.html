@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Récursivité</title>
+  <title>Récursivité - exponentiation</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -77,6 +77,7 @@
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">La récursivité</h2>
+          <p>TD exponentiation</p>
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
         </div>
       </div> <!---->
@@ -263,7 +264,7 @@ def puissance_recursif_rapide(x: int, n: int) -> int:
         return x*puissance_recursif_rapide(x*x, n//2)
       </code></pre>
               
-                <p class="justifier">L’exposant est divisé par 2 à chaque appel. Si $n=2^p$ alors il y a p appels récursifs. Le coût temporel est logarithmique.</p>
+                <p class="justifier">L’exposant est divisé par 2 à chaque appel. Si $n=2^p$ alors il y a p appels récursifs. Le coût temporel est <b>logarithmique.</b></p>
                 </div><!-- fin col-->
 
 
