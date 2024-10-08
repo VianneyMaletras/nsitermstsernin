@@ -117,3 +117,7 @@ code{
 .maxwidth90{
     max-width: 90%;
 }
+
+.listbullet{
+    list-style: inside!important;
+}
