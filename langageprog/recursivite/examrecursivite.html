@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Récursivité - exponentiation</title>
+  <title>Récursivité</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -37,7 +37,7 @@
 
   <!-- and it's easy to individually load additional languages -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
->
+  >
 </head>
 
 <body>
@@ -56,7 +56,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
+          <li><a class="nav-link scrollto" href="#resume">Consignes</a></li>
 
           <li><a class="nav-link scrollto" href="#annexes">Annexes</a></li>
           <!-- <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
@@ -76,46 +76,15 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">La récursivité</h2>
-          <p>TD exponentiation</p>
+          <h2 class="animate__animated animate__fadeInDown">Examen sur la récursivité</h2>
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
         </div>
       </div> <!---->
-
 
   </section> <!-- End Hero -->
 
   <main id="main">
 
-    <section class="inner-page">
-      <div class="container">
-        <h2> Programme officiel</h2>
-        <table>
-          <thead>
-            <th>
-              Contenus
-            </th>
-            <th class="padleft10px">
-              Capacités attendues
-            </th>
-            <th class="padleft10px"> Commentaires</th>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Récursivité</td>
-              <td class="padleft10px">Écrire un programme récursif.
-                <br>Analyser le fonctionnement d’un programme récursif.                <br />
-              </td>
-               <td class="padleft10px">Des exemples relevant de domaines variés sont à privilégier.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>
-
-        </p>
-      </div>
-    </section>
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="features">
@@ -124,115 +93,136 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-bars-staggered"></i>
-              <h4 class="d-none d-lg-block">Algorithme itératif</h4>
+              <i class="fa-solid fa-stopwatch"></i>
+              <h4 class="d-none d-lg-block">Consigne et exercice 1</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="fa-solid fa-repeat"></i>
-              <h4 class="d-none d-lg-block">Algorithme récursif</h4>
+
+          <li class="nav-item col-3" data-aos="zoom-in">
+            <a class="nav-link  show" data-bs-toggle="tab" href="#tab-2">
+              <i class="fa-solid fa-stopwatch"></i>
+              <h4 class="d-none d-lg-block">Exercice 2 et 3</h4>
             </a>
-          </li>
+          <li class="nav-item col-3" data-aos="zoom-in">
+            <a class="nav-link  show" data-bs-toggle="tab" href="#tab-3">
+              <i class="fa-solid fa-stopwatch"></i>
+              <h4 class="d-none d-lg-block">Exercice 4</h4>
+            </a>
 
         </ul>
 
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 text-center">
-                <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                  <h3>Algorithme itératif</h3>
-                  <p class="justifier">L’exponentiation est une opération mathématique que l’on peut traduire par plusieurs algorithmes. $$a^n=\underbrace{a ×….× a}_{n~fois}\qquad et\ a^0=1$$</p>
-                  <p>
+              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+
+                <h3></h3>
+
+
+                <div class="box notices cstyle warning">
+                  <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> Consignes</div>
+                  <div class="box-content">
+                    <p class="paddingside2">
+                    <ul class="listbullet"> Cette évaluation se déroule en deux parties:
+                      <li>Exercice 1 et 2 premières questions de l’exercice 2 sur papier.</li>
+                      <li>Fin exercice 2 et et exercice 3 sur machine.</li>
+                      <li>La partie papier est à réaliser en premier. Une attention particulière sera portée sur la
+                        présentation, la syntaxe et l’orthographe. Pour la seconde partie:</li>
+                      <li>Créer un dossier eval-03-votrenom</li>
+                      <li>Écrire chaque fonction dans un fichier différent.</li>
+                      <li>Documenter les fonctions.</li>
+                      <li>Compresser le dossier et le déposer dans le casier du professeur.</li>
+                    </ul>
+                    </p>
+
+
+                  </div>
+                </div><!-- fin box warning-->
+
+
+              </div><!-- fin col-->
+              <div class="col-lg-6 order-2 order-lg-2 justifier">
+                <div
+                  class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                  <h3>Exercice 1 sur papier</h3>
                   <pre>
                     <code class="langage-python">
-def puissance_perso(x:int, n:int) -> int:
-  res = 1
-  while not n == 0:
-      res = res * x
-      n = n - 1
-  return res
+def operation(x: int, y: int) -> int:
+if x == 0:
+    return 0
+elif x % 2 == 0:
+    return operation(x//2, y+y)
+else:
+    return operation(x//2, y+y) + y
+                  
+operation(5, 2)
                         </code></pre>
-                      </p>
-                </div>
-                </div><!-- fin col-->
-                <div class="col-lg-6 order-2 order-lg-2 text-center">
-
-                  <div class="box notices cstyle note boxcontentnote">
-                    <div class="box-label boxbglabelnote">
-                      <i class="fa-fw fas fa-exclamation-circle"></i> Remarque
-                    </div>
-                    <div class="box-content ">
-                      <p class="paddingside2">
-                        Le coût temporel est <b>linéaire</b> en fonction de l’exposant <b>n</b>.
-                      </p>
-                    </div>
-                  </div>
+                  1. Donner, dans l’ordre, les différents appels récursifs effectués lors de l’appel principal:<br>
+                  <pre>
+                          <code class="langage-python">
+operation(5, 2)
+                          </code></pre>
+                  <br>2. Donner la valeur renvoyée par ce même appel.
+                  <br>3. Que fait cette fonction.
+                  </p>
                 </div>
 
-
-          </div><!--fin row-->
+              </div>
+            </div><!--fin row-->
 
           </div><!-- fin tabpane-->
+
           <div class="tab-pane" id="tab-2">
 
-              <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                  <h3>Algorithme récursif</h3>
-                  <p class="justifier"> Première formulation mathématique récursive: $$ puissance(x,n) = \left{ \begin{array}{ll} 1 & si~ n=0 \ x.puissance(x,n-1) & si~ n>0 \end{array} \right. $$</p>
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-2 mt-3 mt-lg-0">
+                <h3>Exercice 2</h3>
+                <ol>
+                  <li>En Python, comment vérifier qu’un nombre est multiple de 3 (divisible par 3)?</li>
+                  <li>Combien vaut la somme de tous les multiples de 3 inférieurs ou égaux à 10?</li>
+                  <li>Écrire la fonction <strong>multiple3(n: int) -&gt; int</strong> qui renvoie la somme de tous les
+                    multiples de 3 inférieurs ou égaux à <strong>n</strong>.</li>
+                  <li>Écrire deux assertions pour tester la fonction.</li>
+                </ol>
+              </div>
+
+
+
+
 
               
-                    <pre>
-                      <code class="langage-python">
-def puissance_recursif(x: int, n: int) -> int:
-    if n == 0: # cas limite
-        return 1
-    else: # appel récursif
-        return x*puissance_recursif(x, n-1)
-      </code></pre>
-                 
-               
+              <div class="col-lg-6 order-2 order-lg-2 justifier">
+                <h3>Exercice 3</h3>
+                On s’intéresse à la suite d’entiers définie par:
+                <br>U<sub>1</sub> = 1, U<sub>2</sub> = 1 et, pour tout entier naturel n, par U<sub>n+2</sub> = U<sub>n+1</sub> + U<sub>n</sub>. 
+                <br>Elle s’appelle la suite de Fibonnaci.
+                <br>Écrire la fonction <b>récursive</b> fibonacci qui prend un entier n > 0 et qui renvoie l’élément d’indice n de cette suite.
+              </div>
 
-                 <p class="justifier">Le coût temporel reste linéaire: la fonction effectue n appels récursifs.
 
-                  Seconde formulation récursive: $$ puissance(x,n) = \left{ \begin{array}{ll} 1 & si~ n=0 \ puissance(xx,n/2) & si~ n>0 ~ et~ n~pair\ x.puissance(xx,(n-1)/2) & si~ n>0 ~ et ~n~ impair
-                  \end{array} \right. $$</p>
-                 
-                  <pre>
-                    <code class="langage-python">
-def puissance_recursif_rapide(x: int, n: int) -> int:
-    if n == 0: # cas limite
-        return 1
-    elif n % 2 == 0: # pair
-        return puissance_recursif_rapide(x*x, n//2)
-    else: # impair
-        return x*puissance_recursif_rapide(x*x, n//2)
-      </code></pre>
+            </div><!-- fin row-->
+          </div><!-- fin tabcontent-->
+          <div class="tab-pane" id="tab-3">
+
+            <div class="row">
+           
+
               
-                <p class="justifier">L’exposant est divisé par 2 à chaque appel. Si $n=2^p$ alors il y a p appels récursifs. Le coût temporel est <b>logarithmique.</b></p>
-                </div><!-- fin col-->
+              <div class="col-lg-6 order-2 order-lg-2 justifier">
+                <h3>Exercice 4</h3>
+                Soit U<sub>n</sub> la suite définie par  :<br>
+<img src="ressource/suiteexamrecurs.png"/>
+                <ol>
+                  <li>Écrire la fonction récursive suite(n: int) -> int qui renvoie le n-ième terme de la suite.</li>
+                    <li>Écrire deux assertions pour tester la fonction.</li>
+                </ol>
+              </div>
 
 
-
-
-
-
-
-
-
-                <div class="col-lg-6 order-1 order-lg-2 text-center">
-                  <!-- <img src="ressource/appels.png" alt="" class="img-fluid"> -->
-                </div>
-
-
-              </div><!-- fin row-->
-            </div>
-
-
-          </div><!-- fin tabpane 2-->
-            </div><!-- fin tabcontent-->
-          </div><!-- fin container-->
+            </div><!-- fin row-->
+          </div><!-- fin tab pane-->
+          </div><!-- fin tabcontent-->
+        </div><!-- fin container-->
 
     </section>
     <!-- End Resume Section -->
@@ -240,43 +230,43 @@ def puissance_recursif_rapide(x: int, n: int) -> int:
 
 
 
- <!-- ======= Annexes Section ======= -->
- <section id="annexes" class="pricing">
-  <div class="container">
+    <!-- ======= Annexes Section ======= -->
+    <section id="annexes" class="pricing">
+      <div class="container">
 
-     <div class="section-title" data-aos="zoom-out">
-      <h2>Annexes</h2>
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Annexes</h2>
 
-    </div>
-    <div class="section-title" data-aos="zoom-out">
-      <h3 id="liens">Liens</h3>
-
-    </div>
-    <div class="row">
-
-      <div class="col-lg-3 col-md-6">
-        <div class="box" data-aos="zoom-in">
-          <h3>Lien vers le notebook</h3>
-          <ul> Sur Capytale
-          </ul>
-
-
-          <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/d7f8-4188361" class="btn-buy">Y aller</a>
-          </div>
         </div>
-      </div>
+        <div class="section-title" data-aos="zoom-out">
+          <h3 id="liens">Liens</h3>
 
-      <div class="section-title" data-aos="zoom-out">
-        <h3 id="pj">Pièces jointes</h3>
+        </div>
+        <div class="row">
 
-      </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="box" data-aos="zoom-in">
+              <h3>Lien vers le notebook</h3>
+              <ul> Sur Capytale
+              </ul>
 
-    <div class="row">
+
+              <div class="btn-wrap">
+                <a href="https://capytale2.ac-paris.fr/web/c/e5ff-3988640" class="btn-buy">Y aller</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title" data-aos="zoom-out">
+            <h3 id="pj">Pièces jointes</h3>
+
+          </div>
+
+          <div class="row">
 
 
-      <div class="col-lg-3 col-md-6">
-        <!-- <div class="box" data-aos="zoom-in">
+            <div class="col-lg-3 col-md-6">
+              <!-- <div class="box" data-aos="zoom-in">
           <h3>Le fichier du notebook </h3>
           <ul>Utilisable avec jupyter          </ul>
           <div class="btn-wrap">
@@ -291,12 +281,12 @@ def puissance_recursif_rapide(x: int, n: int) -> int:
           <a target="_blank" href="ressource/TPbanque.zip" class="btn-buy">Télécharger</a>
         </div>
       </div> -->
-    </div>
-    </div>
+            </div>
+          </div>
 
-</section><!-- End Annexes Section -->
+    </section><!-- End Annexes Section -->
 
-  </div>
+    </div>
 
   </main><!-- End #main -->
 
