@@ -126,7 +126,12 @@ code{
 .maxwidth90{
     max-width: 90%;
 }
-
+.maxwidth17prcts {
+    max-width: 17%;
+}
+.margintop2prcts{
+    margin-top: 2%;
+}
 .listbullet{
     list-style: inside!important;
 }

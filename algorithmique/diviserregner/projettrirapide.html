@@ -56,9 +56,14 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
+          <li><a class="nav-link scrollto" href="#resume">Consignes</a></li>
 
-          <li><a class="nav-link scrollto" href="#annexes">Annexes</a></li>
+          <ul>
+            <li><a href="#liens">Liens</a></li>
+             <li><a href="#pj">Pieces Jointes</a></li>
+      
+           </ul>
+         </li>
           <!-- <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
@@ -123,7 +128,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-bars-staggered"></i>
-              <h4 class="d-none d-lg-block">Algorithme diviser pour régner</h4>
+              <h4 class="d-none d-lg-block">Consigne</h4>
             </a>
           </li>
           <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
@@ -138,81 +143,19 @@
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="box notices cstyle note boxcontentnote">
-                <div class="box-label boxbglabelnote">
-                  <i class="fa-fw fas fa-exclamation-circle"></i> Remarque
-                </div>
-                <div class="box-content ">
-                  <p class="paddingside2">
-                    Le principe de l’algorithme de <b>diviser pour régner</b> consiste à découper un gros problème, 
-                    difficile à résoudre, en petits problèmes plus simples.
-                  </p>
-                 <br>
-                </div>
-              </div><!-- fin label box-->
-           
-              
-          </div><!--fin row-->
-          <div class="row">
-            <h5>Obtenir de petits problèmes</h5>
-            <img src="ressources/dpr1.png" alt="" class="img-fluid maxwidth500px" >
-          </div>
          
-          <div class="row">
-            <h5>Résoudre les petits problèmes: une liste d’un élément est triée.</h5>
-            <img src="ressources/dpr2.png" alt="" class="img-fluid maxwidth500px" >
-          </div>
-          <div class="row">
-            <h5>Trier</h5>
-            <img src="ressources/dpr3.png" alt="" class="img-fluid maxwidth500px" >
-          </div>
-          <div class="row">
-            <h5>Et remonter</h5>
-            <img src="ressources/dpr4.png" alt="" class="img-fluid maxwidth500px" >
-          </div>
-        <div class="row">
-          <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                  
-            <pre>
-              <code class="langage-python">def tri_fusion(tab: list, deb: int, fin: int) -> None:
-if deb < fin:
-milieu = (deb+fin)//2
-tri_fusion(tab, deb, milieu)
-tri_fusion(tab, milieu+1, fin)
-fusionner(tab, deb, fin)
-                  </code></pre>
-          </div>
-          </div>
-          <div class="row">
-            <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                    
-              <pre>
-                <code class="langage-python">def fusionner(tab: list, deb: int, fin: int) -> None:
-res = []
-milieu = (deb+fin)//2
-i = deb
-j = milieu+1
-while i <= milieu and j <= fin:
-    if tab[i] < tab[j]:
-        res.append(tab[i])
-        i += 1
-    else:
-        res.append(tab[j])
-        j += 1
-    
-# ajout fin de tab
-for i1 in range(i, milieu+1):
-    res.append(tab[i1])        
-for j1 in range(j, fin+1):
-    res.append(tab[j1])
-    
-# remplacement tab par res
-for k in range(fin-deb+1):
-    tab[deb+k] = res[k]
-                    </code></pre>
-            </div>
-            </div>
+            <p class="paddingside2">
+             <ul class="examlisteinside">
+              <li>Constituer des groupes de 2.</li>
+              <li>Produire une vidéo de 3 minutes présentant le tri rapide. Les informations à fournir peuvent être variées mais il faudra obligatoirement mettre en avant le concept diviser pour régner.</li>
+              <li>Partager le temps de parole équitablement.</li>
+              <li>Le mode de présentation est libre (diaporama, schéma sur papier, interview, mise en scène…). L’originalité sera valorisée, tout en veillant à respecter la rigueur scientifique nécessaire.</li>
+              <li>Toute information supplémentaire (historique, scientifique, …) sera valorisée.</li>
+              <li>De plus, il faudra produire une implémentation en Python du tri rapide. Des tests seront construits pour valider l’implémentation. Le fichier Python devra être rendu avec la vidéo. L’implémentation pourra être utilisée dans la vidéo, mais sans être l’élément central de la présentation.</li>
+              </ul>
+          </div><!--fin row-->
           </div><!-- fin tabpane-->
+          
           <div class="tab-pane" id="tab-2">
             
               <div class="row">

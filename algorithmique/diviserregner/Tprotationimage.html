@@ -58,7 +58,12 @@
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
           <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
 
-          <li><a class="nav-link scrollto" href="#annexes">Annexes</a></li>
+          <ul>
+            <li><a href="#liens">Liens</a></li>
+             <li><a href="#pj">Pieces Jointes</a></li>
+      
+           </ul>
+         </li>
           <!-- <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
@@ -126,124 +131,44 @@
               <h4 class="d-none d-lg-block">Algorithme diviser pour régner</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="fa-solid fa-repeat"></i>
-              <h4 class="d-none d-lg-block">Complexité</h4>
-            </a>
-          </li>
+      
           
         </ul>
 
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="box notices cstyle note boxcontentnote">
-                <div class="box-label boxbglabelnote">
-                  <i class="fa-fw fas fa-exclamation-circle"></i> Remarque
-                </div>
-                <div class="box-content ">
+         
                   <p class="paddingside2">
-                    Le principe de l’algorithme de <b>diviser pour régner</b> consiste à découper un gros problème, 
-                    difficile à résoudre, en petits problèmes plus simples.
+                   <ul class="examlisteinside"> Diviser pour régner se décompose en trois parties:
+
+                  <li> <b>diviser</b> Le problème est partagé en plusieurs petits problèmes identiques.</li>
+                  <li> <b>traitement</b> Chaque petit problème est résolu.</li>
+                  <li> <b>recombinaison</b> Les petits problèmes résolus sont assemblés pour remonter au problème principal.</li>
+                  </ul>
                   </p>
-                 <br>
-                </div>
-              </div><!-- fin label box-->
-           
+                
+                    
               
           </div><!--fin row-->
-          <div class="row">
-            <h5>Obtenir de petits problèmes</h5>
-            <img src="ressources/dpr1.png" alt="" class="img-fluid maxwidth500px" >
+          <div class="row margintop2prcts">
+            <h5>1 pixel: rien à faire</h5>
+            <img src="ressources/carre0.png" alt="" class="img-fluid maxwidth17prcts" >
           </div>
          
-          <div class="row">
-            <h5>Résoudre les petits problèmes: une liste d’un élément est triée.</h5>
-            <img src="ressources/dpr2.png" alt="" class="img-fluid maxwidth500px" >
+          <div class="row margintop2prcts">
+            <h5>Rrotation anti-horaire</h5>
+            <img src="ressources/carre1.png" alt="" class="img-fluid maxwidth17prcts" ><br>
+            <img src="ressources/carre1-rot.png" alt="" class="img-fluid maxwidth17prcts" >
           </div>
-          <div class="row">
-            <h5>Trier</h5>
-            <img src="ressources/dpr3.png" alt="" class="img-fluid maxwidth500px" >
+          <div class="row margintop2prcts">
+            <h5>rotation anti-horaire d’un bloc</h5>
+            <img src="ressources/carre2-int.png" alt="" class="img-fluid maxwidth17prcts" >
+            <img src="ressources/carre2-rot.png" alt="" class="img-fluid maxwidth17prcts" >
           </div>
-          <div class="row">
-            <h5>Et remonter</h5>
-            <img src="ressources/dpr4.png" alt="" class="img-fluid maxwidth500px" >
-          </div>
-        <div class="row">
-          <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                  
-            <pre>
-              <code class="langage-python">def tri_fusion(tab: list, deb: int, fin: int) -> None:
-if deb < fin:
-milieu = (deb+fin)//2
-tri_fusion(tab, deb, milieu)
-tri_fusion(tab, milieu+1, fin)
-fusionner(tab, deb, fin)
-                  </code></pre>
-          </div>
-          </div>
-          <div class="row">
-            <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                    
-              <pre>
-                <code class="langage-python">def fusionner(tab: list, deb: int, fin: int) -> None:
-res = []
-milieu = (deb+fin)//2
-i = deb
-j = milieu+1
-while i <= milieu and j <= fin:
-    if tab[i] < tab[j]:
-        res.append(tab[i])
-        i += 1
-    else:
-        res.append(tab[j])
-        j += 1
-    
-# ajout fin de tab
-for i1 in range(i, milieu+1):
-    res.append(tab[i1])        
-for j1 in range(j, fin+1):
-    res.append(tab[j1])
-    
-# remplacement tab par res
-for k in range(fin-deb+1):
-    tab[deb+k] = res[k]
-                    </code></pre>
-            </div>
-            </div>
+       
           </div><!-- fin tabpane-->
-          <div class="tab-pane" id="tab-2">
-            
-              <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                
-                  <p class="paddingside2">
-                    <ul class="examlisteinside">
-                      <li>La complexité du découpage en sous-listes (fonction tri_fusion) est logarithmique.</li>
-                      <li>La complexité de la fusion (fonction fusionner) est linéaire.</li>
-                    </ul>
-                  </p>
-
-                  <div class="box notices cstyle warning">
-                    <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
-                    <div class="box-content">
-                      <p class="paddingside2">L’algorithme de tri fusion a une complexité:
-                        <b>n*log<sub>2</sub>(n)</b>
-                    </div>
-                  </div>
-                </div>         
-              
-                
-        
-
-                
-                
-              </div><!-- fin row-->
-            </div>
-
-  
-          </div><!-- fin tabpane 2-->
+          
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
           
@@ -273,7 +198,7 @@ for k in range(fin-deb+1):
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/dcf8-3996075" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/20aa-4329977" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
@@ -287,21 +212,15 @@ for k in range(fin-deb+1):
       
 
       <div class="col-lg-3 col-md-6">
-        <!-- <div class="box" data-aos="zoom-in">
+        <div class="box" data-aos="zoom-in">
           <h3>Le fichier du notebook </h3>
-          <ul>Utilisable avec jupyter          </ul>
+          <ul>en pdf         </ul>
           <div class="btn-wrap">
-            <a target="_blank" href="ressource/TP.zip" class="btn-buy">Télécharger</a>
+            <a target="_blank" href="ressources/Tprotationimage.pdf" class="btn-buy">Télécharger</a>
           </div>
         </div>
       </div>
-      <div class="box" data-aos="zoom-in">
-        <h3>Le code  </h3>
-        <ul>Pour démarrer        </ul>
-        <div class="btn-wrap">
-          <a target="_blank" href="ressource/TPbanque.zip" class="btn-buy">Télécharger</a>
-        </div>
-      </div> -->
+      
     </div>
     </div>
 
