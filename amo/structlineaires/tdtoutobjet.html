@@ -183,7 +183,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-stopwatch"></i>
-              <h4 class="d-none d-lg-block">Coût exponentiation</h4>
+              <h4 class="d-none d-lg-block">Tout est objet</h4>
             </a>
           </li>
           
@@ -195,14 +195,23 @@
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                  <h3>Algorithme itératif</h3>
+                  <div class="box notices cstyle note boxcontentobservation">
+                    <div class="box-label boxbglabelobservation">
+                      <i class="fa-fw fas fa-exclamation-circle"></i> Information
+                    </div>
+                    <div class="box-content ">
+                      <p class="paddingside2">En Python, tout est objet et presque tout dispose d’attributs et de méthodes.</p>
+                    </div>
+                  </div>
+               
                   <p class="paddingside2">
-                    <ul class="listbullet"> La durée d’exécution d’un programme sur une machine dépend de nombreux paramètres:
+                    <ul class="listbullet"> Conséquences:
 
-                 <li> fréquence du processeur,</li>
-                 <li> accès à la mémoire,</li>
-                 <li> autres tâches en cours d’exécution,</li>
-                 <li> …</li>
+                      
+
+                 <li>Les structures Python (list, tuple, dict) sont des classes prédéfinies.
+                 </li>
+                 <li>  Les fonctionnalités présentées dans la documentation (len, append) sont des méthodes de ces classes.</li>
                  </ul></p>
                 </div>
                 </div><!-- fin col-->
@@ -210,18 +219,29 @@
                   <div class="box notices cstyle warning">
                     <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
                     <div class="box-content">
-                      <p class="paddingside2">Pour étudier l’efficacité d’un programme, on évalue le nombre d’instructions qu’il doit exécuter: c’est le <b>coût temporel.</b>
-                        <br>
-                        Ce coût ne dépend pas de la puissance de la machine.</p>
+                      <p class="paddingside2">Dans un programme, quand on écrit l’instruction :</p>
                      
                         
                     </div>
+                    <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                    
+                      <pre>
+<code class="langage-python">tab = [1, 2, 3]
+  print(len(tab))</code></pre>
+                    </div>
+                    <div class="box-content">
+                      <p class="paddingside2">
+
+                   L'interpréteur Python appelle la méthode __len__() de la classe List.
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-
+               
           </div><!--fin row-->
-
+          <div class="row">
+            <img class="" src="./ressources/objectfather.png" alt="" text="Instance ">
+          </div>
           </div><!-- fin tabpane-->
           
 
