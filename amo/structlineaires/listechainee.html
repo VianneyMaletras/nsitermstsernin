@@ -182,12 +182,22 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-stopwatch"></i>
-              <h4 class="d-none d-lg-block">Coût exponentiation</h4>
+              <i class="fa-solid fa-ear-listen"></i>
+              <h4 class="d-none d-lg-block">Principe</h4>
             </a>
           </li>
-          
-
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+              <i class="fa-solid fa-bars"></i>
+              <h4 class="d-none d-lg-block">Interface</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+              <i class="fa-solid fa-laptop-code"></i>
+              <h4 class="d-none d-lg-block">Implémentation</h4>
+            </a>
+          </li>
         </ul>
 
         <div class="tab-content" data-aos="fade-up">
@@ -195,37 +205,122 @@
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                  <h3>Algorithme itératif</h3>
                   <p class="paddingside2">
-                    <ul class="listbullet"> La durée d’exécution d’un programme sur une machine dépend de nombreux paramètres:
+                   <ul class="listbullet"> Dans une liste chaînée, chaque élément :
 
-                 <li> fréquence du processeur,</li>
-                 <li> accès à la mémoire,</li>
-                 <li> autres tâches en cours d’exécution,</li>
-                 <li> …</li>
+                 <li> prend une place libre quelconque en mémoire.</li>
+                 <li> connaît l’emplacement de l’élément suivant.</li>
                  </ul></p>
+                 <p class="paddingside2">
+                 Dans une liste chaînée, ajouter un élément se fait en temps constant. Par contre, pour lire l’élément de rang <b>n</b>, 
+                 la complexité est linéaire en n.</p>
                 </div>
                 </div><!-- fin col-->
                 <div class="col-lg-6 order-2 order-lg-2 justifier">
-                  <div class="box notices cstyle warning">
-                    <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
-                    <div class="box-content">
-                      <p class="paddingside2">Pour étudier l’efficacité d’un programme, on évalue le nombre d’instructions qu’il doit exécuter: c’est le <b>coût temporel.</b>
-                        <br>
-                        Ce coût ne dépend pas de la puissance de la machine.</p>
-                     
-                        
-                    </div>
-                  </div>
+                  <img src="ressources/liste.png" alt="" class="img-fluid">
                 </div>
 
 
           </div><!--fin row-->
 
           </div><!-- fin tabpane-->
-          
+          <div class="tab-pane" id="tab-2">
 
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <div class="box notices cstyle note boxcontentobservation">
+                  <div class="box-label boxbglabelobservation">
+                    <i class="fa-fw fas fa-exclamation-circle"></i> Information
+                  </div>
+                  <div class="box-content ">
+                    <p class="paddingside2">Une <b>interface</b> est le point de communication entre la structure de données (ici la liste chaînée) 
+                      et l’utilisateur (ici l’Homme).</p>
+                  </div>
+                </div>
+               
+
+            </div>
+            <div class="col-lg-6 order-1 order-lg-2 ">
+         
+              <p class=" justifier">
+                <p class="paddingside2 ">
+                  <ul class="listbullet"> L’interface d’une liste chaînée propose les fonctionnalités pour utiliser la structure :
+
+                    <li>vérifier si la liste est vide,</li>
+                    <li>renvoyer la taille de la liste,</li>
+                    <li>renvoyer l’élément de rang n,</li>
+                    <li>insérer un élément.</li>
+
+                  </ul>
+
+            
+              </p>
+
+              </p>
+              <img src="ressources/printvsreturnresult.png" alt="" class="img-fluid">
+            </div>
+          </div><!-- fin row -->
+
+   
           </div><!-- fin tabpane 2-->
+          <div class="tab-pane" id="tab-3">
+
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3></h3>
+                <p class="justifier">
+                  La programmation orientée objet est un choix d’implémentation possible. Il n’est pas unique.
+              </p>
+              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                    
+                <pre>
+<code class="langage-python">class Maillon:
+  """
+  Crée un maillon de la liste chaînée
+  """
+
+  def __init__(self, val: int, suiv: object):
+      self.valeur = val
+      self.suivant = suiv</code></pre>
+              </div>
+          
+            <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                    
+              <pre>
+<code class="langage-python">class Liste:
+  """
+  Crée une liste chaînée
+  """
+
+  def __init__(self):
+      # selt.tete référence un Maillon
+      self.tete = None</code></pre>
+            </div>
+          </div>
+            <div class="col-lg-6 order-1 order-lg-2 text-center">
+              Les méthodes ajoutées à l’objet <b>Liste</b> implémenteront l’interface proposée.
+              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                    
+                <pre>
+  <code class="langage-python">class Liste:
+    """
+    Crée une liste chaînée
+    """
+
+    def __init__(self):
+        # selt.tete référence un Maillon
+        self.tete = None
+
+    def est_vide(self) -> bool:
+        return self.tete is None
+
+    def ajouter(self, val: int) -> None:
+        self.tete = Maillon(val, self.tete)</code></pre>
+            </div>
+          </div><!-- fin row -->
+
+   
+          </div><!-- fin tabpane 3-->
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
 
