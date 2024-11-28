@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Projet Tri rapide</title>
+  <title>Abres binaires</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -34,7 +34,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  
+
   <!-- and it's easy to individually load additional languages -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/python.min.js"></script>
 >
@@ -56,14 +56,9 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#resume">Consignes</a></li>
+          <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
 
-          <ul>
-            <li><a href="#liens">Liens</a></li>
-             <li><a href="#pj">Pieces Jointes</a></li>
-      
-           </ul>
-         </li>
+          <li><a class="nav-link scrollto" href="#annexes">Annexes</a></li>
           <!-- <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
@@ -81,45 +76,19 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Projet Tri rapide</h2>
-          <p>Algorithmique : diviser pour régner</p>
+          <h2 class="animate__animated animate__fadeInDown">Stocker un arbre binaire</h2>
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
         </div>
       </div> <!---->
+
+   
 
   </section> <!-- End Hero -->
 
   <main id="main">
 
-    <!-- <section class="inner-page">
-      <div class="container">
-        <h2> Programme officiel</h2>
-        <table>
-          <thead>
-            <th>
-              Contenus
-            </th>
-            <th class="padleft10px">
-              Capacités attendues
-            </th>
-            <th class="padleft10px"> Commentaires</th> 
-          </thead>
-          <tbody>
-            <tr>
-              <td>Récursivité</td>
-              <td class="padleft10px">Écrire un programme récursif.
-                <br>Analyser le fonctionnement d’un programme récursif.                <br />
-              </td>
-               <td class="padleft10px">Des exemples relevant de domaines variés sont à privilégier.</td>
-            </tr>
-          </tbody>
-        </table>
+    
 
-        <p>
-
-        </p>
-      </div>
-    </section> -->
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="features">
       <div class="container">
@@ -127,40 +96,76 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-bars-staggered"></i>
-              <h4 class="d-none d-lg-block">Consigne</h4>
+              <i class="fa-solid fa-arrow-down-short-wide"></i>
+              <h4 class="d-none d-lg-block">Stocker un arbre binaire
+              </h4>
             </a>
           </li>
-        
+ 
           
         </ul>
 
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-         
-            <p class="paddingside2">
-             <ul class="examlisteinside">
-              <li>Constituer des groupes de 2.</li>
-              <li>Produire une vidéo de 3 minutes présentant le tri rapide. Les informations à fournir peuvent être variées mais il faudra obligatoirement mettre en avant le concept diviser pour régner.</li>
-              <li>Partager le temps de parole équitablement.</li>
-              <li>Le mode de présentation est libre (diaporama, schéma sur papier, interview, mise en scène…). L’originalité sera valorisée, tout en veillant à respecter la rigueur scientifique nécessaire.</li>
-              <li>Toute information supplémentaire (historique, scientifique, …) sera valorisée.</li>
-              <li>De plus, il faudra produire une implémentation en Python du tri rapide. Des tests seront construits pour valider l’implémentation. Le fichier Python devra être rendu avec la vidéo. L’implémentation pourra être utilisée dans la vidéo, mais sans être l’élément central de la présentation.</li>
-              </ul>
-          </div><!--fin row-->
-          </div><!-- fin tabpane-->
-          
-   
-  
+              <div class="col-lg-12 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+      
+                <div class="box notices cstyle warning">
+                  <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
+                  <div class="box-content">
+                    <p class="paddingside2">Pour stocker un arbre binaire, on peut utiliser un simple tableau.
+                  </div>
+                </div>
+                <img src="ressources/stock.png" alt="" class="img-fluid">
+                </div><!-- fin col-->
+               
 
+
+          </div><!--fin row-->
+
+          </div><!-- fin tabpane-->
+          <div class="tab-pane" id="tab-2">
+
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+               
+                    <p class="paddingside2">
+                      <ul class="listbullet">
+                        On peut parcourir un arbre:
+
+                       <li> en largeur,</li>
+                       <li> en profondeur:
+                      <ul>
+                          <li> - préfixe,</li>
+                          <li> - infixe,</li>
+                          <li> - suffixe.</li>
+                      </ul>
+                      </li>
+                    
+                      </ul>
+                    </p>
+                    
+                 
+               
+
+            </div>
+            <div class="col-lg-6 order-2 order-lg-2 justifier">
+              <img src="ressources/interblocage.png" alt="" class="img-fluid">
+            </div>
+          </div><!-- fin row -->
+
+   
+          </div><!-- fin tabpane 2-->
+        
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
-          
+
     </section>
     <!-- End Resume Section -->
 
-    
+
+
+
  <!-- ======= Annexes Section ======= -->
  <section id="annexes" class="pricing">
   <div class="container">
@@ -174,7 +179,7 @@
 
     </div>
     <div class="row">
-        
+
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
           <h3>Lien vers le notebook</h3>
@@ -183,7 +188,7 @@
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/dcf8-3996075" class="btn-buy">Y aller</a>
+            <a href="" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
@@ -194,7 +199,7 @@
       </div>
 
     <div class="row">
-      
+
 
       <div class="col-lg-3 col-md-6">
         <!-- <div class="box" data-aos="zoom-in">
