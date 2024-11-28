@@ -81,60 +81,7 @@
         </div>
       </div> <!---->
 
-      <!-- Slide 2 -->
-      <!-- <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Entrainez vous avec la section exercices</h2>
-          <p class="animate__animated animate__fadeInUp"></p>
-          <a href="#exos" class="btn-get-started animate__animated animate__fadeInUp scrollto">Accéder au site</a>
-        </div>
-      </div> -->
-
-      <!-- Slide 3 -->
-      <!-- <div class="carousel-item">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Préparez la rentrée</h2>
-          <p class="animate__animated animate__fadeInUp"></p>
-          <a href="#prepaterm" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a>
-        </div>
-      </div> -->
-      <!-- Slide 3
-<div class="carousel-item">
-  <div class="carousel-container">
-    <h2 class="animate__animated animate__fadeInDown">futurecoder.forge.aeif.fr </h2>
-    <p class="animate__animated animate__fadeInUp">Site est construit et maintenu par des enseignants de NSI.
-      Ceci garantit une progression réfléchie et adaptée à un apprentissage en autonomie directement dans le navigateur.
-      Une aide très intuitive permet de repérer et comprendre ses erreurs.</p>
-    <a href="https://futurecoder.forge.aeif.fr/" target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a>
-  </div>
-</div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-      </a>
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-      </a>
-    </div>-->
-      <!--
-    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
-      <defs>
-        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
-      </defs>
-      <g class="wave1">
-        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
-      </g>
-      <g class="wave2">
-        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
-      </g>
-      <g class="wave3">
-        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
-      </g>
-    </svg> -->
+  
 
   </section> <!-- End Hero -->
 
@@ -229,45 +176,38 @@
       self.successeur = s
                     
                     
-class File:
+class Pile:
     def __init__(self):
-        self.premier = None
-        self.dernier = None
-
-    def est_vide(self) -> bool:
-        return self.premier is None 
-                        
-    def enfiler(self, e: int) -> None:
-        nouveau = Element(e, None)
+        self.sommet=None
+        
+    def est_vide(self)->bool:
+        return self.sommet is None
     
-        if self.est_vide():
-            # 1 seul élément: le premier est le dernier
-            self.premier = nouveau
-        else:
-            # le dernier devient avant-dernier
-            self.dernier.successeur = nouveau
+    def empiler(self, e:int)->None:
+        self.sommet=Element(e,self.sommet)
     
-        # le nouveau devient dernier
-        self.dernier = nouveau      
-    def __str__(self):
-        c = self.premier
-        s = ""
-        while not c is None:
-            s = s + str(c.donnees)+"|"
-            c = c.successeur
-        # décorations
-        return "\u2BA4|" + s + "\u2BA0"
-                        
-from random import randint
-
-maFile = File()
-for i in range(6):
-    maFile.enfiler(randint(1, 20))
-    print(maFile)
-
-for i in range(6):
-    maFile.defiler()
-    print(maFile)
+    def depiler(self)->int:
+        if not self.est_vide():
+            retour=self.sommet.donnees
+            self.sommet=self.sommet.successeur
+        return retour
+    
+    
+    def __str__(self) -> str:
+        affiche=""
+        last = self.sommet
+        while last is not None:
+            # affichage vertical: \n = saut de ligne
+            affiche += str(last.donnees) + "\n\u2193\n"
+            last = last.successeur
+            return affiche + "fin"
+p = Pile()
+p.empiler(3)
+p.empiler(9)
+p.empiler(4)
+print(p)
+print("dépile:", p.depiler())
+print(p)   
                       </code></pre>
                   </div>
                 </div>
@@ -343,6 +283,17 @@ for i in range(6):
               s = s + str(c.donnees)+"|"
               c = c.successeur
           return "\u2BA4|" + s + "\u2BA0"
+
+from random import randint
+
+maFile = File()
+for i in range(6):
+    maFile.enfiler(randint(1, 20))
+    print(maFile)
+
+for i in range(6):
+    maFile.defiler()
+    print(maFile)
                       </code></pre>
                   </div>
                 </div>
