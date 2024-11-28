@@ -229,32 +229,45 @@
       self.successeur = s
                     
                     
-class Pile:
+class File:
     def __init__(self):
-        self.sommet = None
+        self.premier = None
+        self.dernier = None
 
     def est_vide(self) -> bool:
-        return self.sommet is None
-
-    def empiler(self, e: int) -> None:
-        self.sommet = Element(e, self.sommet)
-
-    def depiler(self) -> int:
-        # gestion d'erreur
-        if not self.est_vide():
-            # récupère la valeur du haut de la pile
-            res = self.sommet.donnees
-            # retire le sommet
-            self.sommet = self.sommet.successeur
-            return res
+        return self.premier is None 
+                        
+    def enfiler(self, e: int) -> None:
+        nouveau = Element(e, None)
     
+        if self.est_vide():
+            # 1 seul élément: le premier est le dernier
+            self.premier = nouveau
+        else:
+            # le dernier devient avant-dernier
+            self.dernier.successeur = nouveau
+    
+        # le nouveau devient dernier
+        self.dernier = nouveau      
     def __str__(self):
-        affiche = ""
-        last = self.sommet
-        while last is not None:
-            affiche += str(last.donnees) + "\n"
-            last = last.successeur
-        return affiche
+        c = self.premier
+        s = ""
+        while not c is None:
+            s = s + str(c.donnees)+"|"
+            c = c.successeur
+        # décorations
+        return "\u2BA4|" + s + "\u2BA0"
+                        
+from random import randint
+
+maFile = File()
+for i in range(6):
+    maFile.enfiler(randint(1, 20))
+    print(maFile)
+
+for i in range(6):
+    maFile.defiler()
+    print(maFile)
                       </code></pre>
                   </div>
                 </div>
