@@ -83,7 +83,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Stocker un arbre binaire</h2>
+          <h2 class="animate__animated animate__fadeInDown">Arbre binaire de recherche</h2>
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
         </div>
       </div> <!---->
@@ -104,7 +104,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-arrow-down-short-wide"></i>
-              <h4 class="d-none d-lg-block">Stocker un arbre binaire
+              <h4 class="d-none d-lg-block">Abre binaire de recherche
               </h4>
             </a>
           </li>
@@ -115,15 +115,36 @@
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="col-lg-12 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-      
+              <di class="examlistinside"v class="col-lg-12 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+      <ul class="examlistinside">                Un arbre binaire de recherche est un arbre binaire auquel on impose une contrainte pour chaque nœud:
+
+<li> valeurs du sous-arbre gauche sont plus petites que celle du nœud,</li>
+<li> valeurs du sous-arbre droit sont plus grandes que celle du nœud.</li>
+</ul>
+
                 <div class="box notices cstyle warning">
                   <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
                   <div class="box-content">
-                    <p class="paddingside2">Pour stocker un arbre binaire, on peut utiliser un simple tableau.
+                    <p class="paddingside2">
+                      Dans un arbre binaire de recherche équilibré, la complexité temporelle de l’algorithme de recherche est <b>logarithmique</b>
                   </div>
                 </div>
-                <img src="ressources/stock.png" alt="" class="img-fluid">
+              
+
+                <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                  
+                  <pre>
+                    <code class="langage-python">def rechercher(val: int, abr: list, i_pere: int) -> bool:
+  if abr[i_pere] == 0: # non trouvé
+      return False
+  elif abr[i_pere] == val: # trouvé
+      return True
+  elif val < abr[i_pere]: # gauche
+      return rechercher(val, abr, 2*i_pere+1)
+  else: # droit
+      return rechercher(val, abr, 2*i_pere+2)
+                        </code></pre>
+                </div>
                 </div><!-- fin col-->
                
 
@@ -131,38 +152,7 @@
           </div><!--fin row-->
 
           </div><!-- fin tabpane-->
-          <div class="tab-pane" id="tab-2">
-
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-               
-                    <p class="paddingside2">
-                      <ul class="listbullet">
-                        On peut parcourir un arbre:
-
-                       <li> en largeur,</li>
-                       <li> en profondeur:
-                      <ul>
-                          <li> - préfixe,</li>
-                          <li> - infixe,</li>
-                          <li> - suffixe.</li>
-                      </ul>
-                      </li>
-                    
-                      </ul>
-                    </p>
-                    
-                 
-               
-
-            </div>
-            <div class="col-lg-6 order-2 order-lg-2 justifier">
-              <img src="ressources/interblocage.png" alt="" class="img-fluid">
-            </div>
-          </div><!-- fin row -->
-
-   
-          </div><!-- fin tabpane 2-->
+          
         
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
@@ -195,7 +185,7 @@
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/ec32-4816707" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/e3b2-4930372" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
