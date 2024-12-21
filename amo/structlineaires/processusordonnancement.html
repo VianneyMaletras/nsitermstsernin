@@ -205,9 +205,9 @@ class Pile:
     
     def depiler(self)->int:
         if not self.est_vide():
-            retour=self.sommet.donnees
-            self.sommet=self.sommet.successeur
-        return retour
+          retour=self.sommet.donnees
+          self.sommet=self.sommet.successeur
+          return retour
     
     
     def __str__(self) -> str:
@@ -217,7 +217,8 @@ class Pile:
             # affichage vertical: \n = saut de ligne
             affiche += str(last.donnees) + "\n\u2193\n"
             last = last.successeur
-            return affiche + "fin"
+        return affiche + "fin"
+        
 p = Pile()
 p.empiler(3)
 p.empiler(9)
