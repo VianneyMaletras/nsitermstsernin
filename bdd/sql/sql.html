@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BDD</title>
+  <title>SQL</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,12 +58,12 @@
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
           <li class="dropdown"><a href=""><span>BDD</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./projetlivraison.html">Projet</a></li>
-              <li><a href="./modelrelationnel.html">Modèle relationnel</a></li>
-              <li><a href="./modelrelationnel.html#exos">Exercices modèle relationnel</a></li>
-              <li><a href="../sgbd/sgbd.html">Système de Gestion de Base de Données</a></li>
-              <li><a href="../sql/sql.html">Manipulation de données</a></li>
-              <li><a href="../sql/sql.html#exos">Exercices SQL</a></li>
+              <li><a href="../modelerelationnel/projetlivraison.html">Projet</a></li>
+              <li><a href="../modelerelationnel/modelrelationnel.html">Modèle relationnel</a></li>
+              <li><a href="../modelerelationnel/modelrelationnel.html#exos">Exercices modèle relationnel</a></li>
+              <li><a href="../sgbd/">Système de Gestion de Base de Données</a></li>
+              <li><a href="./sql.html">Manipulation de données</a></li>
+              <li><a href="./sql.html#exos">Exercices SQL</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
@@ -86,7 +86,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Modèle relationnel</h2>
+          <h2 class="animate__animated animate__fadeInDown">Manipulation de données</h2>
          
           
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
@@ -108,23 +108,17 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-arrow-down-short-wide"></i>
-              <h4 class="d-none d-lg-block">Concepts fondamentaux
-              </h4>
+              <i class="fa-solid fa-language"></i>
+              <h4 class="d-none d-lg-block">Histoire</h4>
             </a>
           </li>
           <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
             <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="fa-solid fa-bars"></i>
-              <h4 class="d-none d-lg-block">Contraintes d’intégrité</h4>
+              <i class="fa-solid fa-language"></i>
+              <h4 class="d-none d-lg-block">Le langage</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-              <i class="fa-solid fa-laptop-code"></i>
-              <h4 class="d-none d-lg-block">Schéma relationnel</h4>
-            </a>
-          </li>
+        
           
         </ul>
 
@@ -132,17 +126,27 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-      <p>
-        Ce cours présente le modèle relationnel, une méthode de modélisation des données développée par Edgar Franck Codd dans les années 1970. Voici un résumé des points clés :
-      </p>
-      <ul class="examlisteinside">
-        <li>La complexité du découpage en sous-listes (fonction tri_fusion) est logarithmique.</li>
-        <li>La complexité de la fusion (fonction fusionner) est linéaire.</li>
-      </ul>
+                
+                <div class="box notices cstyle warning">
+                  <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
+                  <div class="box-content">
+                    <p class="paddingside2">
+                      Le <b>Structured Query Language est développé</b>, dans
+les années 70 par Donald Chamberlin, pour manipuler
+et éditer des données stockées dans la base de données
+relationnelle.<br>
+Ce langage est normalisé au milieu des années 80.
+                  </div>
+                </div>
+                
              
                 </div><!-- fin col-->
-               
-
+                <div class="col-lg-6 order-2 order-lg-2 ">
+                  <img src="ressources/codd.jpg" alt="" class="img-fluid " >
+                  <br>
+                 
+                </div>
+           
 
           </div><!--fin row-->
 
@@ -151,17 +155,66 @@
 
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-                <ol class="">
-                  Les contraintes d’intégrité assurent la cohérence des données :
-                  <li>Contrainte de domaine : Définit l’ensemble des valeurs possibles pour chaque attribut.</li>
-                  <li>Contrainte d’entité : Garantit l’unicité de chaque entité via une clé primaire.</li>
-                  <li>Contrainte de référence : Établit des liens entre les relations à l’aide de clés étrangères.</li>
-                </ol>
-               
+                <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                    
+                  <pre>
+                    <code class="language-sql"># insertion
+INSERT INTO Auteurs (nom, prenom) VALUES ("Tardi", "Jacques");
+                        </code></pre>
+                </div>
 
             </div>
+            <div class="col-lg-6 order-2 order-lg-2 ">
             
+            </div>
           </div><!-- fin row -->
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
+              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                  
+                <pre>
+                  <code class="language-sql"># mise à jour
+UPDATE Emprunteurs SET naissance = "1977-12-08"
+WHERE nom = "Amstrong";
+                      </code></pre>
+              </div>
+
+          </div>
+          <div class="col-lg-6 order-2 order-lg-2 ">
+          
+          </div>
+        </div><!-- fin row -->
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
+            <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                
+              <pre>
+                <code class="language-sql"># suppression
+DELETE FROM Bandes_dessinees WHERE isbn = 2205050699;
+                    </code></pre>
+            </div>
+
+        </div>
+        <div class="col-lg-6 order-2 order-lg-2 ">
+        
+        </div>
+      </div><!-- fin row -->
+      <div class="row">
+        <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
+          <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+              
+            <pre>
+              <code class="language-sql"># sélection
+SELECT nom FROM Auteurs WHERE prenom = "Lance" 
+AND NOT nom = "Arleston";
+                  </code></pre>
+          </div>
+
+      </div>
+      <div class="col-lg-6 order-2 order-lg-2 ">
+      
+      </div>
+    </div><!-- fin row -->
 
    
           </div><!-- fin tabpane 2-->
@@ -171,10 +224,11 @@
               <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                 <p class=" justifier">
                   <p class="paddingside2 ">
-                    <ul class="listbullet"> Le schéma relationnel décrit la structure des relations :
-                      <li>Il spécifie le nom de la relation, ses attributs et leurs domaines.</li>
-                      <li>La clé primaire est soulignée.</li>
-                      <li>Les clés étrangères sont marquées d’un astérisque.,</li>
+                    <ul class="listbullet"> Le SGBD est construit pour respecter les contraintes d’intégrité:
+
+                      <li>Contrainte de domaine: type de données</li>
+                      <li>Contrainte d’entité: clé primaire</li>
+                      <li>Contrainte de référence: clé étrangère</li>
                    
   
                     </ul>
@@ -186,17 +240,7 @@
             </div>
             <div class="col-lg-6 order-2 order-lg-2 ">
                      
-              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                    
-                <pre>
-<code class="langage-sql">Colis(numéro entier, masse entier, longueur entier, largeur entier, 
-  hauteur entier, id_expediteur entier*)
-Client(identifiant entier, nom caractères,  prénom caractères,
- département caractères)</code></pre>
-              </div>
-              <p>
-                Ce modèle vise à éviter la redondance des données et à assurer leur intégrité, tout en permettant des opérations mathématiques sur les relations
-              </p>
+              
             </div>
           </div><!-- fin row -->
 
@@ -222,7 +266,7 @@ Client(identifiant entier, nom caractères,  prénom caractères,
         <div class="icon-box" data-aos="zoom-in-left">
           <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
           <h4 class="title"><a href="">Les exercices du notebook</a></h4>
-          <p class="description"><a href=""  >Y Aller</a></p>
+          <p class="description"><a href="https://capytale2.ac-paris.fr/web/c/31ca-5223729"  >Y Aller</a></p>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
@@ -260,17 +304,41 @@ Client(identifiant entier, nom caractères,  prénom caractères,
 
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-          <h3>Lien vers le notebook</h3>
+          <h3>Le cours </h3>
           <ul> Sur Capytale
           </ul>
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/b5d5-5146427" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/7adb-5223707" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Le logiciel dbbrowser  </h3>
+          <ul> version pc
+          </ul>
 
+
+          <div class="btn-wrap">
+            <a href="https://sqlitebrowser.org/dl/" target="_blank" class="btn-buy">Y aller</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Le logiciel dbbrowser  </h3>
+          <ul> version portable
+          </ul>
+
+
+          <div class="btn-wrap">
+            <a href="https://download.sqlitebrowser.org/SQLiteDatabaseBrowserPortable_3.11.2_English.paf.exe" target="_blank" class="btn-buy">Télécharger</a>
+          </div>
+        </div>
+      </div>
+     
       <div class="section-title" data-aos="zoom-out">
         <h3 id="pj">Pièces jointes</h3>
 
@@ -281,10 +349,10 @@ Client(identifiant entier, nom caractères,  prénom caractères,
 
       <div class="col-lg-3 col-md-6">
          <div class="box" data-aos="zoom-in">
-          <h3>Le corrigé </h3>
-          <ul>en pdf      </ul>
+          <h3>La base de donnée </h3>
+          <ul>en .zip     </ul>
           <div class="btn-wrap">
-            <a target="_blank" href="ressources/projetlivraisonProblematiqueFull.pdf" class="btn-buy">Télécharger</a>
+            <a target="_blank" href="ressources/exercices-sql.zip" class="btn-buy">Télécharger</a>
           </div>
         </div>
       </div>
