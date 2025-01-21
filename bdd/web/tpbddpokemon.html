@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>BDD</title>
+  <title>TP BDD Pokémon</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -58,17 +58,16 @@
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
           <li class="dropdown"><a href=""><span>BDD</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./projetlivraison.html">Projet</a></li>
-              <li><a href="./modelrelationnel.html">Modèle relationnel</a></li>
-              <li><a href="./modelrelationnel.html#exos">Exercices modèle relationnel</a></li>
+              <li><a href="../modelerelationnel/projetlivraison.html">Projet</a></li>
+              <li><a href="../modelerelationnel/modelrelationnel.html">Modèle relationnel</a></li>
+              <li><a href="../modelerelationnel/modelrelationnel.html#exos">Exercices modèle relationnel</a></li>
               <li><a href="../sgbd/sgbd.html">Système de Gestion de Base de Données</a></li>
-              <li><a href="../sql/sql.html">Manipulation de données</a></li>
-              <li><a href="../sql/sql.html#exos">Exercices SQL</a></li>
-              <li><a href="../sql/requetesavancees.html">Requêtes avancées</a></li>
-              <li><a href="../sql/requetesavancees.html#exos">Exercices Requêtes avancées</a></li>
-              <li><a href="../web/langeweb.html">Langage du web</a></li>
-              
-              <li><a href="../web/tpbddpokemon.html">TP BDD</a></li>
+              <li><a href="./sql.html">Manipulation de données</a></li>
+              <li><a href="./sql.html#exos">Exercices SQL</a></li>
+              <li><a href="./requetesavancees.html">Requêtes avancées</a></li>
+              <li><a href="./requetesavancees.html#exos">Exercices Requêtes avancées</a></li>
+              <li><a href="./langeweb.html">Langage du web</a></li>
+              <li><a href="./tpbddpokemon.html">TP BDD</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
@@ -79,8 +78,8 @@
               <li><a href="#pj">Pieces Jointes</a></li>
             </ul>
           </li>
-
-          <li><a class="nav-link scrollto" href="#exos">Exercices</a></li>
+<!-- 
+          <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -97,7 +96,9 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Projet Livraisons</h2>
+          <h2 class="animate__animated animate__fadeInDown">TP BDD </h2>
+         
+          
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
         </div>
       </div> <!---->
@@ -117,12 +118,17 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-arrow-down-short-wide"></i>
-              <h4 class="d-none d-lg-block">Projet
-              </h4>
+              <i class="fa-solid fa-language"></i>
+              <h4 class="d-none d-lg-block">PHP</h4>
             </a>
           </li>
- 
+          <!-- <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+              <i class="fa-solid fa-language"></i>
+              <h4 class="d-none d-lg-block">Le langage</h4>
+            </a>
+          </li> -->
+        
           
         </ul>
 
@@ -130,20 +136,33 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-      <p>
-        L’objectif est de construire une application de gestion de livraison de colis qui pourra être mise en place à l’échelle d’une métropole. <br>
-        Elle pourra ainsi gérer plusieurs centaines de livraisons par jour.
-      </p>
+                
+               <ul class="examlisteinside">
+                Le PHP est un langage impératif. La syntaxe est différente du Python mais les constructions élémentaires sont similaires. Les objectifs de cette séquence sont de:
+
+                    <li>comprendre la syntaxe PHP,</li>
+                    <li>être capable de lire un code en PHP,</li>
+                    <li>réaliser une interaction avec une base de données, en PHP.</li>
+               </ul>
+                </div>
+                
              
                 </div><!-- fin col-->
-               
-
+                <div class="col-lg-6 order-2 order-lg-2 ">
+                  
+                  <br>
+                 
+                </div>
+           
 
           </div><!--fin row-->
 
           </div><!-- fin tabpane-->
-          
-        
+     
+          </div><!-- fin row -->
+
+   
+          </div><!-- fin tabpane 3-->
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
 
@@ -151,35 +170,6 @@
     <!-- End Resume Section -->
 
 
-<!-- Exos  Section -->
-<section id="exos" class="services">
-  <div class="container">
-
-    <div class="section-title" data-aos="zoom-out">
-      <h2>Exercices</h2>
-    
-    </div>
-
-    <!-- <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="icon-box" data-aos="zoom-in-left">
-          <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-          <h4 class="title"><a href="">Le fichier en pdf</a></h4>
-          <p class="description"><a href="./ressources/exercices-arbre-binaire.pdf" >Télécharger</a></p>
-         
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
-          <h4 class="title"><a href="">Le site ensi </a></h4>
-          <p class="description"><a href="https://e-nsi.gitlab.io/pratique/N2/870-nb_motzkin/sujet/"  >Y Aller</a></p>  </div>
-      </div>
-
-    </div>
-
-  </div> -->
-</section><!-- End exos  Section -->
 
 
  <!-- ======= Annexes Section ======= -->
@@ -198,17 +188,30 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-          <h3>Lien vers le notebook</h3>
+          <h3>Le cours </h3>
           <ul> Sur Capytale
           </ul>
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/b84c-5065452" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/0357-5375900" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Le logiciel UWAMP  </h3>
+          <ul> version portable
+          </ul>
 
+
+          <div class="btn-wrap">
+            <a href="https://www.uwamp.com/fr/?page=download" target="_blank" class="btn-buy">Y aller</a>
+          </div>
+        </div>
+      </div>
+    
+     
       <div class="section-title" data-aos="zoom-out">
         <h3 id="pj">Pièces jointes</h3>
 
@@ -219,13 +222,22 @@
 
       <div class="col-lg-3 col-md-6">
          <div class="box" data-aos="zoom-in">
-          <h3>Le corrigé </h3>
-          <ul>en pdf      </ul>
+          <h3>L'annexe </h3>
+          <ul>en .zip     </ul>
           <div class="btn-wrap">
-            <a target="_blank" href="ressources/projetlivraisonProblematiqueFull.pdf" class="btn-buy">Télécharger</a>
+            <a target="_blank" href="ressources/pokemon-annexe.zip" class="btn-buy">Télécharger</a>
           </div>
         </div>
       </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+         <h3>Le corrigé </h3>
+         <ul>en .zip     </ul>
+         <div class="btn-wrap">
+           <a target="_blank" href="ressources/pokemon-cor.zip" class="btn-buy">Télécharger</a>
+         </div>
+       </div>
+     </div>
     <!--  <div class="box" data-aos="zoom-in">
         <h3>Le code  </h3>
         <ul>Pour démarrer        </ul>
