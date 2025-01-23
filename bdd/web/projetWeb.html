@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SGBD</title>
+  <title>Projet web</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -61,14 +61,15 @@
               <li><a href="../modelerelationnel/projetlivraison.html">Projet</a></li>
               <li><a href="../modelerelationnel/modelrelationnel.html">Modèle relationnel</a></li>
               <li><a href="../modelerelationnel/modelrelationnel.html#exos">Exercices modèle relationnel</a></li>
-              <li><a href="./sgbd.html">Système de Gestion de Base de Données</a></li>
-              <li><a href="../sql/sql.html">Manipulation de données</a></li>
-              <li><a href="../sql/sql.html#exos">Exercices SQL</a></li>
-              <li><a href="../sql/requetesavancees.html">Requêtes avancées</a></li>
-              <li><a href="../sql/requetesavancees.html#exos">Exercices Requêtes avancées</a></li>
-              <li><a href="../web/langeweb.html">Langage du web</a></li>
-              <li><a href="../web/tpbddpokemon.html">TP BDD</a></li>
-              <li><a href="../web/projetWeb.html">Projet web</a></li>
+              <li><a href="../sgbd/sgbd.html">Système de Gestion de Base de Données</a></li>
+              <li><a href="./sql.html">Manipulation de données</a></li>
+              <li><a href="./sql.html#exos">Exercices SQL</a></li>
+              <li><a href="./requetesavancees.html">Requêtes avancées</a></li>
+              <li><a href="./requetesavancees.html#exos">Exercices Requêtes avancées</a></li>
+              <li><a href="./langeweb.html">Langage du web</a></li>
+              <li><a href="./tpbddpokemon.html">TP BDD</a></li>
+              <li><a href="./projetWeb.html">Projet web</a></li>
+              
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
@@ -79,8 +80,8 @@
               <li><a href="#pj">Pieces Jointes</a></li>
             </ul>
           </li>
-
-          <li><a class="nav-link scrollto" href="#exos">Exercices</a></li>
+<!-- 
+          <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -97,7 +98,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Système de Gestion de Base de Données (SGBD)</h2>
+          <h2 class="animate__animated animate__fadeInDown">Projet web</h2>
          
           
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
@@ -119,23 +120,17 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-database"></i>
-              <h4 class="d-none d-lg-block">Un logiciel
-              </h4>
+              <i class="fa-solid fa-language"></i>
+              <h4 class="d-none d-lg-block">Consignes</h4>
             </a>
           </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+          <!-- <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
             <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
               <i class="fa-solid fa-language"></i>
-              <h4 class="d-none d-lg-block">Un langage</h4>
+              <h4 class="d-none d-lg-block">Le langage</h4>
             </a>
-          </li>
-          <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-              <i class="fa-solid fa-scale-balanced"></i>
-              <h4 class="d-none d-lg-block">Respect des contraintes</h4>
-            </a>
-          </li>
+          </li> -->
+        
           
         </ul>
 
@@ -143,120 +138,128 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <div class="box notices cstyle note boxcontentobservation">
-                  <div class="box-label boxbglabelobservation">
-                    <i class="fa-fw fas fa-exclamation-circle"></i> Information
-                  </div>
-                  <div class="box-content ">
-                    Un <b>Système de Gestion de Base de Données (SGBD)</b> est un logiciel permettant de manipuler les données d’une base de données.
-                  </div>
+                <div class="box notices cstyle warning">
+                <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> Consignes</div>
+                <div class="box-content">
+                  <p class="paddingside2">
+                  <ul class="listbullet"> 
+                    <li>Créer des groupes de 4</li>
+                    <li>Dans chaque fichier, noter les noms des développeurs sous forme de commentaires,
+                      sur la première ligne.</li>
+                  </ul>
+                  </p>
+
+
                 </div>
-      <ul class="examlisteinside"> Exemple:
-        <li>MySQL</li>
-        <li>MariaDB</li>
-        <li>PostgreSQL</li>
-        <li>Oracle</li>
-        <li>SQLServer</li>
-        <li>SQLite</li>
-      </ul>
+              </div><!-- fin box warning-->
+                </div>
+                
              
-                </div><!-- fin col-->
+                
                 <div class="col-lg-6 order-2 order-lg-2 ">
-                  <img src="ressources/codd.jpg" alt="" class="img-fluid " >
+                  
                   <br>
-                  Edgar Codd propose le modèle relationnel.
-                </div>
-           
+             
+              </div><!-- fin col-->
 
           </div><!--fin row-->
 
-          </div><!-- fin tabpane-->
-          <div class="tab-pane" id="tab-2">
-
-            <div class="row">
-              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-                Donald Chamberlin développe le langage SQL.<br>
-
-                Le Structured Query Language permet d’interroger le SGBD.
-
+          
+         <div class="row">
+            <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+                <h4>Initialisation</h4>
+              
+              1. Construire la base de données Livraison dans MySQL:
+                <ul class="listbullet">
+                <li>en s’aidant de la version SQLite,</li>
+                <li>avec la modélisation en pj</li>
+                  <li> en créant les tables à l’aide d’un creation.php; s’aider du TP Pokémon.      </li>
+                </ul>
+                2. Créer un fichier remplissage.php pour insérer des données dans la base; utiliser les données de la base SQLite. Il est possible d’ajouter davantage de données.
             </div>
+            
             <div class="col-lg-6 order-2 order-lg-2 ">
-              <img src="ressources/chamberlin.jpg" alt="" class="img-fluid " >
+                  
               <br>
-              Donald Chamberlin
-            </div>
-          </div><!-- fin row -->
-
-   
-          </div><!-- fin tabpane 2-->
-          <div class="tab-pane" id="tab-3">
-
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <p class=" justifier">
-                  <p class="paddingside2 ">
-                    <ul class="listbullet"> Le SGBD est construit pour respecter les contraintes d’intégrité:
-
-                      <li>Contrainte de domaine: type de données</li>
-                      <li>Contrainte d’entité: clé primaire</li>
-                      <li>Contrainte de référence: clé étrangère</li>
-                   
-  
-                    </ul>
-  
+         
+          </div><!-- fin col-->
+          
+        </div><!--fin row-->
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+              <h4> Interface livreur</h4>
+              1.La page d’accueil se nommera: livreur.php:
+              <ul class="listbullet">
+                <li>Il s’agira d’un formulaire contenant une liste déroulante, qui permettra de choisir le nom du livreur.</li>
+                <li>La validation de ce formulaire dirigera vers le fichier gestion-livreur.php, en transmettant les informations nécessaires du livreur.</li>
+                              </ul>
+                2. La page gestion-livreur.php permettra:
+                <ul class="listbullet">
+                <li>d’afficher les colis gérés par ce livreur et de modifier leur statut; l faudra créer un formulaire qui redirigera vers un fichier statut-livreur.php</li>
+                <li>de sélectionner des nouveaux colis à prendre en charge; il faudra créer un formulaire avec des cases à cocher qui redirigera vers un fichier selection-livreur.php</li>
+                </ul>               
+              </div>
+                <div class="col-lg-6 order-2 order-lg-2 ">
+                  
+                  <br>
+             
+              </div><!-- fin col-->
               
-                </p>
-               
+            </div><!--fin row-->
+          <div class="row">
+            <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+              <h4> Interface client</h4>
+              1. la page d’accueil se nommera: client.php:
+              <ul class="listbullet">
+                <li>            Il s’agira d’un formulaire contenant une liste déroulante, qui permettra de choisir le nom du client.</li>
+                  <li>  La validation de ce formulaire dirigera vers le fichier gestion-client.php, en transmettant les informations nécessaires du client.
+                  </li></ul>
+              2. La page gestion-client.php permettra:
+              <ul class="listbullet">
+                <li>  
+              d’afficher le statut des différents colis envoyés,</li>
+            <li>  de déposer un nouveau colis; pour rappel, le dépôt d’un colis affecte un nouvel identifiant au paquet déposé dans la boîte aux lettres. Pour simplifier, on ne pourra envoyer un colis qu’à un autre client déjà présent dans la base.</li>
+          </ul>
+                </div>
+          <div class="col-lg-6 order-2 order-lg-2 ">
+                  
+            <br>
+       
+        </div><!-- fin col-->
+        
+      </div><!--fin row-->
+<div class="row">
+  <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+<h4>
+  Critères de notation</h4>
+  <ul class="listbullet">
+<li>Nommer le dossier nom1-nom2-….zip, sans accent ni espace et le déposer dans le casier numérique.</li>
+<li>Respect du cahier des charges précédents.</li>
+<li>Tests qui seront effectués:
+<br>- initialisation de la base
+<br>- sélection d’un livreur
+<br>- sélection de nouveaux colis à prendre en charge
+<br>- changement de statut d’un colis
+<br>- sélection d’un client
+<br>- dépôt d’un colis
+</li>
+<li>Esthétique</li>
+</div>
+<div class="col-lg-6 order-2 order-lg-2 ">
+                  
+  <br>
 
-            </div>
-            <div class="col-lg-6 order-2 order-lg-2 ">
-                     
-              
-            </div>
-          </div><!-- fin row -->
+</div><!-- fin col-->
 
-   
-          </div><!-- fin tabpane 3-->
-            </div><!-- fin tabcontent-->
+</div><!--fin row-->
+</div><!-- fin tabpane-->
+            <!-- fin tabcontent-->
           </div><!-- fin container-->
 
     </section>
     <!-- End Resume Section -->
 
-<!-- Exos  Section -->
-<section id="exos" class="services">
-  <div class="container">
 
-    <div class="section-title" data-aos="zoom-out">
-      <h2>Exercices</h2>
-    
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="icon-box" data-aos="zoom-in-left">
-          <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-          <h4 class="title"><a href="">Les exercices du notebook</a></h4>
-          <p class="description"><a href="https://capytale2.ac-paris.fr/web/c/6b9f-5214884"  >Y Aller</a></p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
-          <h4 class="title"><a href="">Le site levavasseur.xyz </a></h4>
-          <p class="description"><a href="https://www.levavasseur.xyz/NSI_T/Base_donnee/Langage_SQL_exercices_et_cor.pdf"  >Y Aller</a></p>  </div>
-      </div> 
-   <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
-          <h4 class="title"><a href="">Le site de david 74 </a></h4>
-          <p class="description"><a href="https://dav74.github.io/site_nsi_term/c3e/"  >Y Aller</a></p>  </div>
-      </div> 
-
-    </div>
-
-  </div>
-</section><!-- End exos  Section -->
 
 
  <!-- ======= Annexes Section ======= -->
@@ -275,17 +278,18 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-          <h3>Lien vers le notebook</h3>
-          <ul> Sur Capytale
+          <h3>Le logiciel UWAMP  </h3>
+          <ul> version portable
           </ul>
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/7b89-5187876" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://www.uwamp.com/fr/?page=download" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
-
+    
+     
       <div class="section-title" data-aos="zoom-out">
         <h3 id="pj">Pièces jointes</h3>
 
@@ -296,13 +300,15 @@
 
       <div class="col-lg-3 col-md-6">
          <div class="box" data-aos="zoom-in">
-          <h3>La base de donnée </h3>
-          <ul>en .zip     </ul>
+          <h3>L'annexe </h3>
+          <ul>en png     </ul>
           <div class="btn-wrap">
-            <a target="_blank" href="ressources/livraison.zip" class="btn-buy">Télécharger</a>
+            <a target="_blank" href="ressources/model-complet.png" class="btn-buy">Télécharger</a>
           </div>
         </div>
       </div>
+     
+     </div>
     <!--  <div class="box" data-aos="zoom-in">
         <h3>Le code  </h3>
         <ul>Pour démarrer        </ul>
