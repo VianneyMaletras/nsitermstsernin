@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Graphe non orienté</title>
+  <title>Graphe  orienté</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -59,6 +59,7 @@
           <li class="dropdown"><a href=""><span>Graphes</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="./grapheno.html">Graphe non orienté</a></li>
+              <li><a href="./grapheoriente.html">Graphe orienté</a></li>
               <!-- <li><a href="../modelerelationnel/modelrelationnel.html">Modèle relationnel</a></li>
               <li><a href="../modelerelationnel/modelrelationnel.html#exos">Exercices modèle relationnel</a></li>
               <li><a href="../sgbd/sgbd.html">Système de Gestion de Base de Données</a></li>
@@ -97,7 +98,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Graphe non orienté</h2>
+          <h2 class="animate__animated animate__fadeInDown">Graphe orienté</h2>
          
           
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
@@ -119,14 +120,15 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-circle-nodes"></i>
-              <h4 class="d-none d-lg-block">Graphe</h4>
+              <i class="fa-solid fa-signs-post"></i>
+              <h4 class="d-none d-lg-block">Graphe orienté</h4>
             </a>
           </li>
         <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
             <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="fa-solid fa-brain"></i>
-              <h4 class="d-none d-lg-block">Représentations en mémoire
+              <i class="fa-solid fa-dumbbell"></i>
+              <h4 class="d-none d-lg-block">Graphes pondérés
+
 </h4>
             </a>
           </li>
@@ -138,18 +140,16 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                
+                <h4>Définition et propriétés</h4>
                <ul class="examlisteinside">
-                Définition et vocabulaire
-                <li>Un graphe est une collection d’éléments (sommets) mis en relation entre eux par des arêtes.</li>
-                <li>L’ordre d’un graphe est le nombre de ses sommets.</li>
-                <li>Un graphe non orienté a des arêtes qui peuvent être parcourues dans les deux sens.</li>
-                <li>Deux sommets reliés par une arête sont dits adjacents.</li>
-                <li>Le degré d’un sommet est le nombre d’arêtes qui y sont connectées.</li>
+                Les graphes orientés sont caractérisés par des arêtes qui ne peuvent être parcourues que dans un seul sens. Voici les points clés :
+                <li><b>Degré d’un sommet</b> : On distingue le degré entrant (d-) et le degré sortant (d+).</li>
+                <li><b>Propriété </b> La somme des degrés entrants et sortants d’un graphe est toujours paire.</li>
+                <li><b>Sommets adjacents</b> : On différencie les prédécesseurs et les successeurs.</li>
                </ul>
                 
                 
-                <ul class="examlisteinside">Propriétés
+                <ul class="examlisteinside"><b>Propriétés</b>
 
                   <li>La somme des degrés d’un graphe est toujours paire.</li>
                   <li>Un arbre est un graphe sans cycle.</li>
@@ -158,7 +158,17 @@
                 </div><!-- fin col-->
                 <div class="col-lg-6 order-2 order-lg-2 ">
                   
-                  <img src="ressources/graphenonoriente.png" alt="" class="img-fluid maxwidth500px" >
+                  <h4>Représentation mémoire</h4>
+                  <ul class="examlisteinside"><b>Matrice d’adjacence</b>
+                    <li>Matrice non symétrique pour les graphes orientés.</li>
+                    <li>Les lignes représentent les sommets de départ, les colonnes les sommets d’arrivée.</li>
+                   </ul>
+                   
+                   <ul class="examlisteinside"><b>Dictionnaire d’adjacence</b>
+    
+                    <li>On peut créer un dictionnaire des successeurs et un dictionnaire des prédécesseurs.</li>
+                    
+                   </ul>
                  
                 </div>
            
@@ -168,28 +178,40 @@
           </div><!-- fin tabpane-->
      
           <div class="tab-pane" id="tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+                <h4>Propriétés</h4>
+                Les graphes pondérés attribuent un poids à chaque arête.
+                
+                </div><!-- fin col-->
+                <div class="col-lg-6 order-2 order-lg-2 ">
+                  
+                  <h4>Représentation mémoire</h4>
+                  <ul class="examlisteinside"><b>Matrice d’adjacence</b>
+                    <li>Les valeurs non nulles représentent le poids des arêtes.                  </li>
+                    <li>Pour un graphe non orienté et pondéré, la matrice est symétrique</li>
+               
+                   </ul>
+                   
+                   <ul class="examlisteinside"><b>Dictionnaire d’adjacence</b>
+  
+                    <li>Peut être modifié pour inclure les poids des arêtes.</li>
+                    <li>Exemple de structure : {"A": [("B", 5), ("C", 4), ("F", 6)], ...}</li>
+                   </ul>
+              
+             
+                 
+                </div>
+           
 
+          </div><!--fin row-->
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-                <ul class="examlisteinside">Matrice d’adjacence
-                  <li>Représentation mathématique où aij = 1 si les sommets i et j sont reliés, 0 sinon.</li>
-                  <li>Pour un graphe non orienté, la matrice est symétrique.</li>
-                  <li>Peut être gourmande en mémoire si le graphe est peu dens</li>
-                 </ul>
-                 
-                 <ul class="examlisteinside">Dictionnaire d’adjacence
-
-                  <li>Liste les sommets adjacents à chaque sommet.</li>
-                  <li>Généralement plus économe en mémoire pour les graphes peu denses.</li>
-                 </ul>
-                 <ul class="examlisteinside">Passage d’une structure à l’autre
-                 <li> Il est possible de convertir une représentation en une autre selon les besoins.</li>
-                 </ul>
-           
+                
 
             </div>
             <div class="col-lg-6 order-2 order-lg-2 ">
-              <img src="ressources/chamberlin.jpg" alt="" class="img-fluid " >
+              
               <br>
 
             </div>
@@ -261,7 +283,7 @@
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/87e4-5458200" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/e679-5482417" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
@@ -286,7 +308,7 @@
 
     <div class="row">
 
-
+<!-- 
       <div class="col-lg-3 col-md-6">
          <div class="box" data-aos="zoom-in">
           <h3>L'annexe </h3>
@@ -295,7 +317,7 @@
             <a target="_blank" href="ressources/parcours_noir.zip" class="btn-buy">Télécharger</a>
           </div>
         </div>
-      </div>
+      </div> -->
     <!--  <div class="box" data-aos="zoom-in">
         <h3>Le code  </h3>
         <ul>Pour démarrer        </ul>
