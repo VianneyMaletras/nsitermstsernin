@@ -5,8 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SQL-avancé
-  </title>
+  <title>Langage web</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -67,10 +66,10 @@
               <li><a href="./sql.html#exos">Exercices SQL</a></li>
               <li><a href="./requetesavancees.html">Requêtes avancées</a></li>
               <li><a href="./requetesavancees.html#exos">Exercices Requêtes avancées</a></li>
-              <li><a href="../web/langeweb.html">Langage du web</a></li>
-              <li><a href="../web/tpbddpokemon.html">TP BDD</a></li>
-              <li><a href="../web/Javascript.html">Javascript</a></li>
-              <li><a href="../web/projetWeb.html">Projet web</a></li>
+              <li><a href="./langeweb.html">Langage du web</a></li>
+              <li><a href="./projetWeb.html">Projet web</a></li>
+              <li><a href="./Javascript.html">Javascript</a></li>
+              <li><a href="./tpbddpokemon.html">TP BDD</a></li>
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
@@ -81,8 +80,8 @@
               <li><a href="#pj">Pieces Jointes</a></li>
             </ul>
           </li>
-
-          <li><a class="nav-link scrollto" href="#exos">Exercices</a></li>
+<!-- 
+          <li><a class="nav-link scrollto" href="#exos">Exercices</a></li> -->
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -99,7 +98,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Requêtes avancées</h2>
+          <h2 class="animate__animated animate__fadeInDown">Javascript</h2>
          
           
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
@@ -122,9 +121,15 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-language"></i>
-              <h4 class="d-none d-lg-block">Requêtes avancées</h4>
+              <h4 class="d-none d-lg-block">JS</h4>
             </a>
           </li>
+          <!-- <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+              <i class="fa-solid fa-language"></i>
+              <h4 class="d-none d-lg-block">Le langage</h4>
+            </a>
+          </li> -->
         
           
         </ul>
@@ -133,169 +138,29 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-          <h4>Aggrégation</h4>
-                  <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                      
-                    <pre>
-                      <code class="language-sql"># fonction d agrégation
- SELECT COUNT(*) FROM Bandes_dessinees 
- WHERE serie = "Aya de Yopougon";
-                          </code></pre>
-                  </div>
+                
+               <ul class="examlisteinside">
+                Javascript est un langage majeur aujourd'hui:
+
+                    <li>Il a commencé comme langage de script pour l'interractivité du web</li>
+                    <li>Il est maintenant utilisé en tant que langage objet avec Typescript</li>
+                    <li>Il existe des serveurs Javascript comme NodeJs</li>
+               </ul>
+                </div>
+                
+             
                 </div><!-- fin col-->
                 <div class="col-lg-6 order-2 order-lg-2 ">
-                  <h4>Distinct</h4>
-                  <!-- <img src="ressources/codd.jpg" alt="" class="img-fluid " > -->
-                  <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                    
-                    <pre>
-                      <code class="language-sql"># DISTINCT supprime les doublons
-    SELECT COUNT(DISTINCT id_dessinateur) 
-    FROM Bandes_dessinees;
-                          </code></pre>
-                  </div>
+                  
                   <br>
                  
                 </div>
            
 
           </div><!--fin row-->
-          <div class="row">
-            <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-        
-               
-              </div><!-- fin col-->
-              <div class="col-lg-6 order-2 order-lg-2 ">
-                <!-- <img src="ressources/codd.jpg" alt="" class="img-fluid " > -->
-                <br>
-               
-              </div>
-         
-
-        </div><!--fin row-->
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-      <h4> Sous-requête</h4>
-              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                  
-                <pre>
-                  <code class="language-sql"># La requête interne est exécutée en premier
- SELECT titre FROM Bandes_dessinees 
- WHERE id_genre = (SELECT id FROM Genres 
-                   WHERE genre = "Jeunesse");
-                      </code></pre>
-              </div>
-            </div><!-- fin col-->
-            <div class="col-lg-6 order-2 order-lg-2 ">
-              <h4>Jointure </h4>
-              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                
-                <pre>
-                  <code class="language-sql"># Fusionner 2 tables
-    SELECT Emprunteurs.nom, Emprunts.isbn FROM Emprunts 
-    JOIN Emprunteurs ON Emprunts.id_emprunteurs = Emprunteurs.id;
-                      </code></pre>
-              </div>
-              <!-- <img src="ressources/codd.jpg" alt="" class="img-fluid " > -->
-              <br>
-             
-            </div>
-       
-
-      </div><!--fin row-->
 
           </div><!-- fin tabpane-->
-          <div class="tab-pane" id="tab-2">
-
-            <div class="row">
-              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-                <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                    
-                  <pre>
-                    <code class="language-sql"># insertion
-INSERT INTO Auteurs (nom, prenom) VALUES ("Tardi", "Jacques");
-                        </code></pre>
-                </div>
-
-            </div>
-            <div class="col-lg-6 order-2 order-lg-2 ">
-            
-            </div>
-          </div><!-- fin row -->
-          <div class="row">
-            <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                  
-                <pre>
-                  <code class="language-sql"># mise à jour
-UPDATE Emprunteurs SET naissance = "1977-12-08"
-WHERE nom = "Amstrong";
-                      </code></pre>
-              </div>
-
-          </div>
-          <div class="col-lg-6 order-2 order-lg-2 ">
-          
-          </div>
-        </div><!-- fin row -->
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-            <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                
-              <pre>
-                <code class="language-sql"># suppression
-DELETE FROM Bandes_dessinees WHERE isbn = 2205050699;
-                    </code></pre>
-            </div>
-
-        </div>
-        <div class="col-lg-6 order-2 order-lg-2 ">
-        
-        </div>
-      </div><!-- fin row -->
-      <div class="row">
-        <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-          <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-              
-            <pre>
-              <code class="language-sql"># sélection
-SELECT nom FROM Auteurs WHERE prenom = "Lance" 
-AND NOT nom = "Arleston";
-                  </code></pre>
-          </div>
-
-      </div>
-      <div class="col-lg-6 order-2 order-lg-2 ">
-      
-      </div>
-    </div><!-- fin row -->
-
-   
-          </div><!-- fin tabpane 2-->
-          <div class="tab-pane" id="tab-3">
-
-            <div class="row">
-              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                <p class=" justifier">
-                  <p class="paddingside2 ">
-                    <ul class="listbullet"> Le SGBD est construit pour respecter les contraintes d’intégrité:
-
-                      <li>Contrainte de domaine: type de données</li>
-                      <li>Contrainte d’entité: clé primaire</li>
-                      <li>Contrainte de référence: clé étrangère</li>
-                   
-  
-                    </ul>
-  
-              
-                </p>
-               
-
-            </div>
-            <div class="col-lg-6 order-2 order-lg-2 ">
-                     
-              
-            </div>
+     
           </div><!-- fin row -->
 
    
@@ -306,40 +171,7 @@ AND NOT nom = "Arleston";
     </section>
     <!-- End Resume Section -->
 
-<!-- Exos  Section -->
-<section id="exos" class="services">
-  <div class="container">
 
-    <div class="section-title" data-aos="zoom-out">
-      <h2>Exercices</h2>
-    
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="icon-box" data-aos="zoom-in-left">
-          <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
-          <h4 class="title"><a href="">Les exercices du notebook</a></h4>
-          <p class="description"><a href="https://capytale2.ac-paris.fr/web/c/a664-5238957"  >Y Aller</a></p>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
-          <h4 class="title"><a href="">Le site levavasseur.xyz </a></h4>
-          <p class="description"><a href="https://www.levavasseur.xyz/NSI_T/Base_donnee/Langage_SQL_exercices_et_cor.pdf"  >Y Aller</a></p>  </div>
-      </div> 
-   <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-        <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
-          <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
-          <h4 class="title"><a href="">Le site de david 74 </a></h4>
-          <p class="description"><a href="https://dav74.github.io/site_nsi_term/c3e/"  >Y Aller</a></p>  </div>
-      </div> 
-
-    </div>
-
-  </div>
-</section><!-- End exos  Section -->
 
 
  <!-- ======= Annexes Section ======= -->
@@ -358,65 +190,68 @@ AND NOT nom = "Arleston";
 
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-          <h3>Le cours </h3>
+          <h3>Le manuel Typescript</h3>
           <ul> Sur Capytale
           </ul>
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/8dfc-5238955" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://www.typescriptlang.org/fr/docs/handbook/intro.html" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-          <h3>Le logiciel dbbrowser  </h3>
-          <ul> version pc
+          <h3>Les questions de la BNS </h3>
+          <ul> sur pixees
           </ul>
 
 
           <div class="btn-wrap">
-            <a href="https://sqlitebrowser.org/dl/" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://pixees.fr/informatiquelycee/n_site/nsi_prem_bns_web.html" target="_blank" class="btn-buy">Y aller</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Le tutoriel NodeJs  </h3>
+          <ul> sur w3schools
+          </ul>
+
+
+          <div class="btn-wrap">
+            <a href="https://www.w3schools.com/nodejs/default.asp" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-          <h3>Le logiciel dbbrowser  </h3>
-          <ul> version portable
+          <h3>NodeJs et Mysql  </h3>
+          <ul> sur w3schools
           </ul>
 
 
           <div class="btn-wrap">
-            <a href="https://download.sqlitebrowser.org/SQLiteDatabaseBrowserPortable_3.11.2_English.paf.exe" target="_blank" class="btn-buy">Télécharger</a>
+            <a href="https://www.w3schools.com/nodejs/nodejs_mysql.aspp" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="box" data-aos="zoom-in">
-          <h3>Le site qkzk  (sql murder mystery)  </h3>
-          <ul> Consigne en français
-          </ul>
-
-
-          <div class="btn-wrap">
-            <a href="https://qkzk.xyz/docs/nsi/cours_terminale/bdd/murder_mystery/" target="_blank" class="btn-buy">Y aller</a>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="box" data-aos="zoom-in">
+            <h3>Un interpreteur en ligne  </h3>
+            <ul> jsfiddle.net
+            </ul>
+  
+  
+            <div class="btn-wrap">
+              <a href="https://jsfiddle.net/" target="_blank" class="btn-buy">Y aller</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6">
-        <div class="box" data-aos="zoom-in">
-          <h3>Le site original knightlab (sql murder mystery)  </h3>
-          <ul> Consigne en anglais
-          </ul>
-
-
-          <div class="btn-wrap">
-            <a href="https://mystery.knightlab.com/" target="_blank" class="btn-buy">Y aller</a>
-          </div>
-        </div>
-      </div>
-      
+     
       <div class="section-title" data-aos="zoom-out">
         <h3 id="pj">Pièces jointes</h3>
 
@@ -427,31 +262,22 @@ AND NOT nom = "Arleston";
 
       <div class="col-lg-3 col-md-6">
          <div class="box" data-aos="zoom-in">
-          <h3>La base de donnée pour le cours</h3>
-          <ul>en .zip     </ul>
+          <h3>Le cours  </h3>
+          <ul>en pdf    </ul>
           <div class="btn-wrap">
-            <a target="_blank" href="ressources/bd-avec-emprunts.zip" class="btn-buy">Télécharger</a>
+            <a target="_blank" href="ressources/5- Introduction à javascript.pdf" class="btn-buy">Télécharger</a>
           </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-         <h3>La base de donnée pour les exercices</h3>
-         <ul>en .zip     </ul>
+         <h3>Des exercices  </h3>
+         <ul>en pdf    </ul>
          <div class="btn-wrap">
-           <a target="_blank" href="ressources/bases-exo-avances.zip" class="btn-buy">Télécharger</a>
+           <a target="_blank" href="ressources/Exercices Js elevesi.pdf" class="btn-buy">Télécharger</a>
          </div>
        </div>
      </div>
-     <div class="col-lg-3 col-md-6">
-      <div class="box" data-aos="zoom-in">
-       <h3>La base de donnée sql-murder-mystery</h3>
-       <ul>en .db     </ul>
-       <div class="btn-wrap">
-         <a target="_blank" href="ressources/bases-exo-avances.zip" class="btn-buy">Télécharger</a>
-       </div>
-     </div>
-   </div>
     <!--  <div class="box" data-aos="zoom-in">
         <h3>Le code  </h3>
         <ul>Pour démarrer        </ul>
