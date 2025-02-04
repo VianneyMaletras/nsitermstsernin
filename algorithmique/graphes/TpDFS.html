@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Graphe  orienté</title>
+  <title>TP DFS dans un graphe orienté</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -91,7 +91,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Graphe orienté</h2>
+          <h2 class="animate__animated animate__fadeInDown">TP DFS dans un graphe orienté</h2>
          
           
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
@@ -114,17 +114,10 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-signs-post"></i>
-              <h4 class="d-none d-lg-block">Graphe orienté</h4>
+              <h4 class="d-none d-lg-block">TP</h4>
             </a>
           </li>
-        <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="fa-solid fa-dumbbell"></i>
-              <h4 class="d-none d-lg-block">Graphes pondérés
-
-</h4>
-            </a>
-          </li>
+        
         
           
         </ul>
@@ -133,36 +126,17 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Définition et propriétés</h4>
-               <ul class="examlisteinside">
-                Les graphes orientés sont caractérisés par des arêtes qui ne peuvent être parcourues que dans un seul sens. Voici les points clés :
-                <li><b>Degré d’un sommet</b> : On distingue le degré entrant (d-) et le degré sortant (d+).</li>
-                <li><b>Propriété </b> La somme des degrés entrants et sortants d’un graphe est toujours paire.</li>
-                <li><b>Sommets adjacents</b> : On différencie les prédécesseurs et les successeurs.</li>
-               </ul>
-                
-                
-                <ul class="examlisteinside"><b>Propriétés</b>
+                <div class="box notices cstyle warning">
+                  <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i> À retenir</div>
+                  <div class="box-content">
+                    <p class="paddingside2">
+                      Pour visiter tous les sommets d’un graphe orienté, il faut effectuer un parcours en profondeur depuis chaque sommet.
 
-                  <li>La somme des degrés d’un graphe est toujours paire.</li>
-                  <li>Un arbre est un graphe sans cycle.</li>
-                 </ul>
-           
+                  </div>
+                </div>
                 </div><!-- fin col-->
                 <div class="col-lg-6 order-2 order-lg-2 ">
-                  
-                  <h4>Représentation mémoire</h4>
-                  <ul class="examlisteinside"><b>Matrice d’adjacence</b>
-                    <li>Matrice non symétrique pour les graphes orientés.</li>
-                    <li>Les lignes représentent les sommets de départ, les colonnes les sommets d’arrivée.</li>
-                   </ul>
-                   
-                   <ul class="examlisteinside"><b>Dictionnaire d’adjacence</b>
-    
-                    <li>On peut créer un dictionnaire des successeurs et un dictionnaire des prédécesseurs.</li>
-                    
-                   </ul>
-                 
+              
                 </div>
            
 
@@ -170,48 +144,6 @@
 
           </div><!-- fin tabpane-->
      
-          <div class="tab-pane" id="tab-2">
-            <div class="row">
-              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Propriétés</h4>
-                Les graphes pondérés attribuent un poids à chaque arête.
-                
-                </div><!-- fin col-->
-                <div class="col-lg-6 order-2 order-lg-2 ">
-                  
-                  <h4>Représentation mémoire</h4>
-                  <ul class="examlisteinside"><b>Matrice d’adjacence</b>
-                    <li>Les valeurs non nulles représentent le poids des arêtes.                  </li>
-                    <li>Pour un graphe non orienté et pondéré, la matrice est symétrique</li>
-               
-                   </ul>
-                   
-                   <ul class="examlisteinside"><b>Dictionnaire d’adjacence</b>
-  
-                    <li>Peut être modifié pour inclure les poids des arêtes.</li>
-                    <li>Exemple de structure : {"A": [("B", 5), ("C", 4), ("F", 6)], ...}</li>
-                   </ul>
-              
-             
-                 
-                </div>
-           
-
-          </div><!--fin row-->
-            <div class="row">
-              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-                
-
-            </div>
-            <div class="col-lg-6 order-2 order-lg-2 ">
-              
-              <br>
-
-            </div>
-          </div><!-- fin row -->
-
-   
-          </div><!-- fin tabpane 2-->
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
 
@@ -228,13 +160,13 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-4 col-md-6">
+      <!-- <div class="col-lg-4 col-md-6">
         <div class="icon-box" data-aos="zoom-in-left">
           <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
           <h4 class="title"><a href="">Les exercices du notebook</a></h4>
           <p class="description"><a href="https://capytale2.ac-paris.fr/web/c/bbeb-5489562"  >Y Aller</a></p>
         </div>
-      </div>
+      </div> -->
       <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
         <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
           <div class="icon"><i class="bi bi-book" style="color: #e9bf06;"></i></div>
@@ -270,13 +202,13 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="box" data-aos="zoom-in">
-          <h3>Le cours </h3>
+          <h3>Le TP </h3>
           <ul> Sur Capytale
           </ul>
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/e679-5482417" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/d9ce-5558699" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
@@ -301,16 +233,16 @@
 
     <div class="row">
 
-<!-- 
+ 
       <div class="col-lg-3 col-md-6">
          <div class="box" data-aos="zoom-in">
           <h3>L'annexe </h3>
           <ul>en .zip     </ul>
           <div class="btn-wrap">
-            <a target="_blank" href="ressources/parcours_noir.zip" class="btn-buy">Télécharger</a>
+            <a target="_blank" href="ressources/dfs-annexe.zip" class="btn-buy">Télécharger</a>
           </div>
         </div>
-      </div> -->
+      </div> 
     <!--  <div class="box" data-aos="zoom-in">
         <h3>Le code  </h3>
         <ul>Pour démarrer        </ul>
