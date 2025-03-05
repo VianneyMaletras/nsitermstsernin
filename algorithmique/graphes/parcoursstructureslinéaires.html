@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Graphe non orienté</title>
+  <title>Graphe  orienté</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -60,12 +60,12 @@
             <ul>
               <li><a href="./grapheno.html">Graphe non orienté</a></li>
               <li><a href="./grapheoriente.html">Graphe orienté</a></li>
-              <li><a href="./parcours.html">Connexité</a></li>
-              <li><a href="./TpDFS.html">TP</a></li>
+             <li><a href="./parcours.html">Connexité</a></li>
+             <li><a href="./TpDFS.html">TP</a></li>
               <li><a href="./detectioncycle">Détection de cycle</a></li>
               <li><a href="./detectioncycle#exos">Exercice parcours</a></li>
               <li><a href="./parcoursstructureslinéaires.html">Parcours et structures linéaires</a></li> 
-        
+                
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#resume">Résumé du cours</a></li>
@@ -94,7 +94,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Graphe non orienté</h2>
+          <h2 class="animate__animated animate__fadeInDown">Parcours et structures linéaires</h2>
          
           
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
@@ -116,17 +116,11 @@
         <ul class="nav nav-tabs row d-flex">
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
-              <i class="fa-solid fa-circle-nodes"></i>
-              <h4 class="d-none d-lg-block">Graphe</h4>
+              <i class="fa-solid fa-signs-post"></i>
+              <h4 class="d-none d-lg-block">Parcours et structure</h4>
             </a>
           </li>
-        <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
-            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-              <i class="fa-solid fa-brain"></i>
-              <h4 class="d-none d-lg-block">Représentations en mémoire
-</h4>
-            </a>
-          </li>
+        
         
           
         </ul>
@@ -136,27 +130,20 @@
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
                 
+                
                <ul class="examlisteinside">
-                Définition et vocabulaire
-                <li>Un graphe est une collection d’éléments (sommets) mis en relation entre eux par des arêtes.</li>
-                <li>L’ordre d’un graphe est le nombre de ses sommets.</li>
-                <li>Un graphe non orienté a des arêtes qui peuvent être parcourues dans les deux sens.</li>
-                <li>Deux sommets reliés par une arête sont dits adjacents.</li>
-                <li>Le degré d’un sommet est le nombre d’arêtes qui y sont connectées.</li>
+                
+
+                
+               <li> Pour implémenter un parcours en profondeur, on peut utiliser une pile.</li>
+               <li> Pour implémenter un parcours en largeur, on peut utiliser une file.</li>
                </ul>
                 
                 
-                <ul class="examlisteinside">Propriétés
-
-                  <li>La somme des degrés d’un graphe est toujours paire.</li>
-                  <li>Un arbre est un graphe sans cycle.</li>
-                 </ul>
-           
                 </div><!-- fin col-->
                 <div class="col-lg-6 order-2 order-lg-2 ">
                   
-                  <img src="ressources/graphenonoriente.png" alt="" class="img-fluid maxwidth500px" >
-                 
+                  <!-- <img src="ressources/parcours-prof.png" alt="" class="img-fluid maxwidth500px" > -->
                 </div>
            
 
@@ -164,36 +151,6 @@
 
           </div><!-- fin tabpane-->
      
-          <div class="tab-pane" id="tab-2">
-
-            <div class="row">
-              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-                <ul class="examlisteinside">Matrice d’adjacence
-                  <li>Représentation mathématique où aij = 1 si les sommets i et j sont reliés, 0 sinon.</li>
-                  <li>Pour un graphe non orienté, la matrice est symétrique.</li>
-                  <li>Peut être gourmande en mémoire si le graphe est peu dens</li>
-                 </ul>
-                 
-                 <ul class="examlisteinside">Dictionnaire d’adjacence
-
-                  <li>Liste les sommets adjacents à chaque sommet.</li>
-                  <li>Généralement plus économe en mémoire pour les graphes peu denses.</li>
-                 </ul>
-                 <ul class="examlisteinside">Passage d’une structure à l’autre
-                 <li> Il est possible de convertir une représentation en une autre selon les besoins.</li>
-                 </ul>
-           
-
-            </div>
-            <div class="col-lg-6 order-2 order-lg-2 ">
-              <img src="ressources/chamberlin.jpg" alt="" class="img-fluid " >
-              <br>
-
-            </div>
-          </div><!-- fin row -->
-
-   
-          </div><!-- fin tabpane 2-->
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
 
@@ -214,7 +171,7 @@
         <div class="icon-box" data-aos="zoom-in-left">
           <div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>
           <h4 class="title"><a href="">Les exercices du notebook</a></h4>
-          <p class="description"><a href="https://capytale2.ac-paris.fr/web/c/2a48-5458259"  >Y Aller</a></p>
+          <p class="description"><a href="https://capytale2.ac-paris.fr/web/c/bbeb-5489562"  >Y Aller</a></p>
         </div>
       </div> -->
       <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
@@ -258,7 +215,7 @@
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/87e4-5458200" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/3027-5825273" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
@@ -283,23 +240,6 @@
 
     <div class="row">
 
-
-      <div class="col-lg-3 col-md-6">
-         <div class="box" data-aos="zoom-in">
-          <h3>L'annexe </h3>
-          <ul>en .zip     </ul>
-          <div class="btn-wrap">
-            <a target="_blank" href="ressources/parcours_noir.zip" class="btn-buy">Télécharger</a>
-          </div>
-        </div>
-      </div>
-    <!--  <div class="box" data-aos="zoom-in">
-        <h3>Le code  </h3>
-        <ul>Pour démarrer        </ul>
-        <div class="btn-wrap">
-          <a target="_blank" href="ressource/TPbanque.zip" class="btn-buy">Télécharger</a>
-        </div>
-      </div> -->
     </div>
     </div>
 
