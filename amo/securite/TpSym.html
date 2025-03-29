@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Algorithme de routage</title>
+  <title>TP chiffrement symétrique</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -56,12 +56,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li class="dropdown"><a href=""><span>Routage</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href=""><span>Sécurité</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./pperoutage.html">Principe du routage</a></li>
-              <li><a href="./rip.html">Protocole RIP</a></li>
-              <li><a href="./ospf.html">OSPF</a></li>
-              <li><a href="./algoroutage.html">Algorithmes</a></li>
+              <li><a href="./chifsym.html">Chiffrement symétrique</a></li>
+              <li><a href="./TpSym.html">TP chiffrement symétrique</a></li>
+              <li><a href="./chiasymdiffiehellman.html"> Diffie-Hellman</a></li>
+              <li><a href="./chfiasymrsa.html">RSA</a></li>
                 
             </ul>
           </li>
@@ -91,7 +91,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Algorithme de routage</h2>
+          <h2 class="animate__animated animate__fadeInDown">TP chiffrement symétrique</h2>
 
          
           
@@ -115,7 +115,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-signs-post"></i>
-              <h4 class="d-none d-lg-block">Parcours</h4>
+              <h4 class="d-none d-lg-block">TP Chiffrement symétrique</h4>
             </a>
           </li>
         
@@ -126,18 +126,20 @@
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="col-lg-12 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <ul class="examlisteinside">
-                  On représente un réseau par un graphe pondéré. Les pondérations représentent:
-                  <li>le nombre de sauts dans le protocole RIP,</li>
-                  <li>le coût d’une liaison dans le protocole OSPF.</li>
-                  <li>Le protocole RIP applique l’algorithme de Bellman-Ford pour établir les tables de routage.</li>
-                  <li>Le protocole OSPF applique l’algorithme de Dijkstra pour établir les tables de routage.</li>
-                  </ul>
+              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
 
+            
+                  
+                <p class="justifier">
+                  Le chiffrement poly-alphabétique permet chiffrer chaque lettre du message avec un symbole différent. <br>
 
-                </ul>
-                  <img src="ressources/graphepondereroutage.png" alt="" class="img-fluid " > 
+                </p>
+                <p class="justifier">
+                  <table>
+                    <thead><tr><th>B</th><th>R</th><th>A</th><th>V</th><th>O</th></tr></thead><tbody><tr><td>66</td><td>82</td><td>65</td><td>86</td><td>79</td></tr><tr><td>1000010</td><td>1010010</td><td>1000001</td><td>1010110</td><td>1001111</td></tr><tr><td>N</td><td>S</td><td>I</td><td>N</td><td>S</td></tr><tr><td>78</td><td>83</td><td>73</td><td>78</td><td>83</td></tr><tr><td>1001110</td><td>1010011</td><td>1001001</td><td>1001110</td><td>1010011</td></tr></tbody></table>
+                </p>
+                <p class="justifier">
+                La porte <b>XOR</b> est une opération implémentée dans les processeurs. Elle permet de réaliser un chiffrement rapide.
               </p>            
                 </div><!-- fin col-->
                
@@ -212,7 +214,7 @@
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/b02b-6183196" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/7d71-6183217" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
@@ -236,7 +238,17 @@
       </div>
 
     <div class="row">
+      <div class="box" data-aos="zoom-in">
+        <h3>L'annexe  </h3>
+        <ul> 
+        </ul>
 
+
+        <div class="btn-wrap">
+          <a href="./ressources/tp-chiffrement-annexe.zip" target="_blank" class="btn-buy">Télécharger</a>
+        </div>
+      </div>
+    </div>
     </div>
     </div>
 

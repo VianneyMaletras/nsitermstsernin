@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Algorithme de routage</title>
+  <title>Chiffrement asymétrique - RSA</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -56,12 +56,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li class="dropdown"><a href=""><span>Routage</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href=""><span>Sécurité</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./pperoutage.html">Principe du routage</a></li>
-              <li><a href="./rip.html">Protocole RIP</a></li>
-              <li><a href="./ospf.html">OSPF</a></li>
-              <li><a href="./algoroutage.html">Algorithmes</a></li>
+              <li><a href="./chifsym.html">Chiffrement symétrique</a></li>
+              <li><a href="./TpSym.html">TP chiffrement symétrique</a></li>
+              <li><a href="./chiasymdiffiehellman.html"> Diffie-Hellman</a></li>
+              <li><a href="./chfiasymrsa.html">RSA</a></li>
                 
             </ul>
           </li>
@@ -91,7 +91,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Algorithme de routage</h2>
+          <h2 class="animate__animated animate__fadeInDown">Chiffrement asymétrique - RSA</h2>
 
          
           
@@ -115,7 +115,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-signs-post"></i>
-              <h4 class="d-none d-lg-block">Parcours</h4>
+              <h4 class="d-none d-lg-block">TP Chiffrement symétrique</h4>
             </a>
           </li>
         
@@ -126,19 +126,35 @@
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="col-lg-12 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <ul class="examlisteinside">
-                  On représente un réseau par un graphe pondéré. Les pondérations représentent:
-                  <li>le nombre de sauts dans le protocole RIP,</li>
-                  <li>le coût d’une liaison dans le protocole OSPF.</li>
-                  <li>Le protocole RIP applique l’algorithme de Bellman-Ford pour établir les tables de routage.</li>
-                  <li>Le protocole OSPF applique l’algorithme de Dijkstra pour établir les tables de routage.</li>
+              <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
+
+                <div class="box notices cstyle note boxcontentnote">
+                  <div class="box-label boxbglabelnote">
+                    <i class="fa-fw fas fa-exclamation-circle"></i> Information
+                  </div>
+                  <div class="box-content">
+                    <p class="paddingside2">
+                      Le chiffrement asymétrique de Diffie-Hellman permet d’échanger des clés via un canal non sûr mais ne gère pas les problèmes liés à l’authentification des interlocuteurs.         </div>
+                </div>
+   
+         
+                <p class="justifier">
+                  <ul class="examlisteinside">
+                    Le chiffrement RSA:
+
+                    <li>1977: Ron Rivest, Adi Shamir et Len Adleman.</li>
+                    <li>breveté en 1983; expiration du brevet en 2000.</li>
+                    <li>utilise des fonctions mathématiques à sens unique (comme Diffie-Hellman)</li>
+                    <li>une paire de clés publique et privée.</li>
                   </ul>
-
-
-                </ul>
-                  <img src="ressources/graphepondereroutage.png" alt="" class="img-fluid " > 
-              </p>            
+              </p>      
+              <p class="justifier">
+                   <span class="math align-center"><mjx-container class="MathJax" jax="CHTML" display="true" style="font-size: 117.4%; position: relative;">
+                    <mjx-math display="true" class="MJX-TEX" aria-hidden="true" style="margin-left: 0px; margin-right: 0px;"><mjx-msub><mjx-mi class="mjx-i">
+                      <mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi>
+                      <mjx-script style="vertical-align: -0.15em; margin-left: -0.04em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D463 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.04em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D462 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.04em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D462 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43E TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.04em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D463 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="block"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><msub><mi>K</mi><mrow data-mjx-texclass="ORD"><mi>p</mi><mi>r</mi><mi>i</mi><mi>v</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>K</mi><mrow data-mjx-texclass="ORD"><mi>p</mi><mi>u</mi><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><msub><mi>K</mi><mrow data-mjx-texclass="ORD"><mi>p</mi><mi>u</mi><mi>b</mi></mrow></msub><mo stretchy="false">(</mo><msub><mi>K</mi><mrow data-mjx-texclass="ORD"><mi>p</mi><mi>r</mi><mi>i</mi><mi>v</mi></mrow></msub><mo stretchy="false">(</mo><mi>m</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo>
+                    <mo>=</mo><mi>m</mi></math></mjx-assistive-mml></mjx-container>
+                  </span>    
                 </div><!-- fin col-->
                
            
@@ -212,7 +228,7 @@
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/b02b-6183196" target="_blank" class="btn-buy">Y aller</a>
+            <a href="chfiasymrsa" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>

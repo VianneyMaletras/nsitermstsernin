@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Algorithme de routage</title>
+  <title>Chiffrement symétrique</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -56,12 +56,12 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-          <li class="dropdown"><a href=""><span>Routage</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href=""><span>Sécurité</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="./pperoutage.html">Principe du routage</a></li>
-              <li><a href="./rip.html">Protocole RIP</a></li>
-              <li><a href="./ospf.html">OSPF</a></li>
-              <li><a href="./algoroutage.html">Algorithmes</a></li>
+              <li><a href="./chifsym.html">Chiffrement symétrique</a></li>
+              <li><a href="./TpSym.html">TP chiffrement symétrique</a></li>
+              <li><a href="./chiasymdiffiehellman.html"> Diffie-Hellman</a></li>
+              <li><a href="./chfiasymrsa.html">RSA</a></li>
                 
             </ul>
           </li>
@@ -91,7 +91,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Algorithme de routage</h2>
+          <h2 class="animate__animated animate__fadeInDown">Chiffrement symétrique</h2>
 
          
           
@@ -115,7 +115,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-signs-post"></i>
-              <h4 class="d-none d-lg-block">Parcours</h4>
+              <h4 class="d-none d-lg-block">Chiffrement symétrique</h4>
             </a>
           </li>
         
@@ -126,18 +126,27 @@
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-              <div class="col-lg-12 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <ul class="examlisteinside">
-                  On représente un réseau par un graphe pondéré. Les pondérations représentent:
-                  <li>le nombre de sauts dans le protocole RIP,</li>
-                  <li>le coût d’une liaison dans le protocole OSPF.</li>
-                  <li>Le protocole RIP applique l’algorithme de Bellman-Ford pour établir les tables de routage.</li>
-                  <li>Le protocole OSPF applique l’algorithme de Dijkstra pour établir les tables de routage.</li>
-                  </ul>
+              <div class="col-lg-8 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
 
+                <div class="box notices cstyle note boxcontentnote">
+                  <div class="box-label boxbglabelnote">
+                    <i class="fa-fw fas fa-exclamation-circle"></i> Remarque
+                  </div>
+                  <div class="box-content">
+                    <p class="paddingside2">
+                      Dans un arbre binaire de recherche équilibré, la complexité temporelle de l’algorithme de recherche est <b>logarithmique</b>
+                      Une fonction de chiffrement est une opération, plus ou moins complexe, qu’on réalise sur chaque partie du message en clair.
+<br>
+Dans un chiffrement symétrique on utilise la même clé pour chiffrer et déchiffrer le message.
+                  </div>
+                </div>
+                
+                <p class="justifier">
+                  Le chiffrement de César est un exemple de chiffrement symétrique. C’est un chiffrement très faible: une analyse de fréquence des lettres permet de le décrypter facilement.
+<br/>
+Le chiffrement poly-alphabétique pallie ce défaut: une même lettre n’est pas codée plusieurs fois par le même symbole.
+                </p>
 
-                </ul>
-                  <img src="ressources/graphepondereroutage.png" alt="" class="img-fluid " > 
               </p>            
                 </div><!-- fin col-->
                
@@ -212,7 +221,7 @@
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/b02b-6183196" target="_blank" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/ce9f-6183211" target="_blank" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
