@@ -58,7 +58,7 @@
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
           <li class="dropdown"><a href="#"><span>Programmation dynamique</span> <i class="bi bi-chevron-right"></i></a>
             <ul>
-                 <li><a href="./fibo.html">Fibonnaci</a></li>
+              <li><a href="./fibo.html">Fibonnaci</a></li>
               <li><a href="./monnaieglouton.html">Glouton</a></li>
               <li><a href="./monnaieglouton.html#liens">TP</a></li>
             </ul>
@@ -89,7 +89,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Suite de Fibonacci</h2>
+          <h2 class="animate__animated animate__fadeInDown">Rendu de monnaie</h2>
           <p>Algorithmique : programmation dynamique</p>
           <!-- <a href="#resume" class="btn-get-started animate__animated animate__fadeInUp scrollto">Lire plus</a> -->
         </div>
@@ -136,13 +136,13 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-bars-staggered"></i>
-              <h4 class="d-none d-lg-block">Programmation dynamique</h4>
+              <h4 class="d-none d-lg-block">Révisions</h4>
             </a>
           </li>
           <li class="nav-item col-3" data-aos="zoom-in" data-aos-delay="100">
             <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
               <i class="fa-solid fa-repeat"></i>
-              <h4 class="d-none d-lg-block">Code</h4>
+              <h4 class="d-none d-lg-block">Approche Dynamique</h4>
             </a>
           </li>
           
@@ -151,161 +151,149 @@
         <div class="tab-content" data-aos="fade-up">
           <div class="tab-pane active show" id="tab-1">
             <div class="row">
-             
+              <div class="col-lg-10 order-1 order-lg-1 mt-3 mt-lg-0">
+              <p class="paddingside2 justifier">
+              L’approche gloutonne du problème de rendu de monnaie est rapide mais ne garantit pas, dans tous les cas, de fournir une solution optimale.
+              <br>
+              La programmation dynamique optimise l’approche exhaustive pour fournir la meilleure solution au problème.
+              </p> 
+              <h3>Révision de l’Algorithme Glouton
+              </h3> 
+              <p class="paddingside2">
+                L’algorithme glouton est une méthode qui fait des choix locaux optimaux pour résoudre un problème. Pour le rendu de monnaie, il choisit toujours la pièce de la plus grande valeur possible.
+                   </p>
            
-                  <p class="paddingside2">
-                    La suite de Fibonacci est définie par :
-                    <ul class="examlisteinside">
-                      <li><span class="math align-center"><mjx-container class="MathJax" jax="CHTML"
-                            style="font-size: 113.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi
-                                  class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script
-                                  style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mn class="mjx-n" size="s"><mjx-c
-                                      class="mjx-c30"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c
-                                  class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c
-                                  class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math
-                                xmlns="http://www.w3.org/1998/Math/MathML">
-                                <msub>
-                                  <mi>F</mi>
-                                  <mn>0</mn>
-                                </msub>
-                                <mo>=</mo>
-                                <mn>0</mn>
-                              </math></mjx-assistive-mml></mjx-container></span></li>
-                      <li><span class="math align-center"><mjx-container class="MathJax" jax="CHTML"
-                            style="font-size: 113.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi
-                                  class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script
-                                  style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mn class="mjx-n" size="s"><mjx-c
-                                      class="mjx-c31"></mjx-c></mjx-mn></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c
-                                  class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c
-                                  class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math
-                                xmlns="http://www.w3.org/1998/Math/MathML">
-                                <msub>
-                                  <mi>F</mi>
-                                  <mn>1</mn>
-                                </msub>
-                                <mo>=</mo>
-                                <mn>1</mn>
-                              </math></mjx-assistive-mml></mjx-container></span></li>
-                      <li><span class="math align-center"><mjx-container class="MathJax" jax="CHTML"
-                            style="font-size: 113.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi
-                                  class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script
-                                  style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-mi class="mjx-i" size="s"><mjx-c
-                                      class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub><mjx-mo class="mjx-n"
-                                space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msub space="4"><mjx-mi class="mjx-i"><mjx-c
-                                    class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script
-                                  style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi
-                                      class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c
-                                        class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c
-                                        class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"
-                                space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i"><mjx-c
-                                    class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-script
-                                  style="vertical-align: -0.15em; margin-left: -0.106em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi
-                                      class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c
-                                        class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c
-                                        class="mjx-c32"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml
-                              unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
-                                <msub>
-                                  <mi>F</mi>
-                                  <mi>n</mi>
-                                </msub>
-                                <mo>=</mo>
-                                <msub>
-                                  <mi>F</mi>
-                                  <mrow data-mjx-texclass="ORD">
-                                    <mi>n</mi>
-                                    <mo>−</mo>
-                                    <mn>1</mn>
-                                  </mrow>
-                                </msub>
-                                <mo>+</mo>
-                                <msub>
-                                  <mi>F</mi>
-                                  <mrow data-mjx-texclass="ORD">
-                                    <mi>n</mi>
-                                    <mo>−</mo>
-                                    <mn>2</mn>
-                                  </mrow>
-                                </msub>
-                              </math></mjx-assistive-mml></mjx-container> pour <mjx-container class="MathJax" jax="CHTML"
-                            style="font-size: 113.2%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi
-                                class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c
-                                  class="mjx-c3E"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c
-                                  class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math
-                                xmlns="http://www.w3.org/1998/Math/MathML">
-                                <mi>n</mi>
-                                <mo>&gt;</mo>
-                                <mn>1</mn>
-                              </math></mjx-assistive-mml></mjx-container></span></li>
-                    </ul> </p>
                 
+                <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                        
+                  <pre>
+                    <code class="langage-python">def rendu_glouton(somme: int, systeme: list) -> list:
+    res = []
+    i_piece = 0
+    while somme > 0:
+        # si pièce est trop grande
+        if systeme[i_piece] > somme:
+            # on avance dans le système
+            i_piece = i_piece + 1
+        else:
+            res.append(systeme[i_piece])
+            somme = somme - systeme[i_piece]
+    return res</code></pre>
+                </div>    
+    
+    
+                    
+                    
+                  </div>
+                </div><!-- fin row-->
              
            
               
-          </div><!--fin row-->
-          <div class="row">
-            <h5>Problème de l’Approche Naïve</h5>
-            <p class="paddingside2">
-              L’approche naïve récursive pour calculer les termes de la suite de Fibonacci est inefficace car elle recalcule plusieurs fois les mêmes valeurs, ce qui entraîne un nombre exponentiel d’appels.
-
-            </p>
-            
-          </div>
-          <div class="row">
-            <h5>Programmation Dynamique</h5>
-            <p class="paddingside2">
-              La programmation dynamique est une méthode algorithmique pour résoudre des problèmes d’optimisation en décomposant le problème en sous-problèmes plus petits et en mémorisant les résultats des sous-problèmes déjà résolus (mémoïsation).
-            </p>
-            <img src="ressources/dpr1.png" alt="" class="img-fluid maxwidth500px" >
-          </div>
-       
+   
          
           </div><!-- fin tabpane-->
           <div class="tab-pane" id="tab-2">
-            
-              <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                  
-          <h5>Approche Top-Down (Descendante)</h5>
-          <ul class="examlisteinside">
-          <li>Utilise une méthode récursive avec mémoïsation.</li>
-<li>Stocke les résultats des appels récursifs pour éviter les recalculs inutiles.</li></ul>
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                
+                <h5> Algorithme Naïf</h5>
+                <p class="paddingside2 justifier">
+                  L’algorithme naïf explore toutes les possibilités pour trouver la solution optimale.
+                </p>
+              
+              <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                
+          <pre>
+            <code class="langage-python">def rendu_naif(somme: int, systeme: list) -> list:
+  if somme > 0:
+      # pire solution: somme = 1 + 1 + 1 ...
+      mini = [1 for _ in range(somme)]  
+      # Teste tous les possibles pour chaque pièce
+      for piece in systeme:
+          if piece <= somme:
+              # descente dans une branche
+              solution = [piece] + \
+                      rendu_naif(somme-piece, systeme)
+              if len(solution) < len(mini):
+                  # une meilleure solution
+                  mini = solution
+      # garde le rendu minimum
+      return mini
+  else:
+      return []
+                </code></pre>
+        </div>
+      
+              </div>
+              
+        <div class="col-lg-6 order-2 order-lg-2 ">
+                
+         <h5>Approche Top-Down (Descendante)</h5>
+         <p class="paddingside2 justifier">
+          Utilise la récursion avec mémoïsation pour stocker les solutions déjà calculées.
+         </p>
           <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   
             <pre>
-              <code class="langage-python">def fibo_top_down(n: int, track: list) -> int:
-  # déjà calculé
-  if track[n] > 0:
-    return track[n]
-  if n == 0:
-    track[0] = 0
-    return track[0]
-  elif n == 1:
-    track[1] = 1
-    return track[1]
-  else:
-    track[n] = fibo_top_down(n-1, track) + fibo_top_down(n-2, track)
-    return track[n]
+              <code class="langage-python">def rendu_td(somme: int, systeme: list, track: list) -> list:
+                # le choix de pièces a déjà été calculé
+                if len(track[somme]) > 0:
+                    return track[somme]
+                elif somme > 0:
+                    mini = [1 for _ in range(somme)] 
+                    # Teste tous les possibles pour chaque pièce
+                    for piece in systeme:
+                        if piece <= somme:
+                            pieces = [piece] + rendu_td(somme-piece, systeme, track)
+                            if len(pieces) < len(mini):
+                                mini = pieces
+                    # garde le rendu minimum
+                    track[somme] = mini
+                    return mini
+                else:
+                    return []
                   </code></pre>
+          </div>    
+
+
+              
+              
+            </div>
+          </div><!-- fin row-->
+              <div class="row">
+                <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
+                  
+          <h5>Approche Bottom-Up </h5>
+          <p class="paddingside2 justifier">
+            Utilise une approche itérative pour résoudre d’abord les petits problèmes.
+           </p>
+             <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
+                  
+            <pre>
+              <code class="langage-python">def rendu_bu(somme: int, systeme: list) -> list:
+    track = [[] for _ in range(somme+1)]
+    # pour chaque pièce de track on cherche le nombre minimum de pièces à rendre
+    for x in range(1, somme+1):
+        # pire solution: ne rend que des pièces de 1
+        mini = [1 for _ in range(x)]
+        for piece in systeme:
+            if piece <= x:
+                # on utilise les solutions précédentes
+                solution = [piece] + track[x-piece]
+                if len(solution) < len(mini):
+                    mini = solution
+        # mémorise solution
+        track[x] = mini
+
+    return track[somme]
+              </code></pre>
           </div>
         
                 </div>
                 
           <div class="col-lg-6 order-2 order-lg-2 ">
                   
-            <h5> Approche Bottom-Up (Ascendante)Approche Top-Down (Descendante)</h5>
-            <ul class="examlisteinside">
-            <li>Utilise une méthode itérative.</li>
-            <li>Résout d’abord les petits problèmes et construit la solution globale.</li></ul>
-            <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
-                    
-              <pre>
-                <code class="langage-python">def fibo_bottom_up(n: int) -> int:
-  track = [0 for _ in range(n+1)]
-  track[1] = 1
-  for i in range(2, n+1):
-      track[i] = track[i-1] + track[i-2]
-  return track[n]
-                    </code></pre>
+          
             </div>    
 
 
@@ -314,22 +302,14 @@
               </div>
             </div><!-- fin row-->
             <div class="row">
-              <h5>Optimisation</h5>
+              <h5>Conclusion</h5>
               <p class="paddingside2">
                 
-Le coût en temps est optimisé car chaque sous-problème n’est calculé qu’une seule fois.
-Le coût en espace peut être optimisé en ne stockant que les résultats nécessaires pour le calcul final.
-
+                La programmation dynamique est une technique efficace pour résoudre des problèmes d’optimisation comme le rendu de monnaie. Elle permet de trouver des solutions optimales en évitant les recalculs inutiles grâce à la mémoïsation. Ce cours montre l’importance de choisir la bonne stratégie algorithmique en fonction du contexte et des contraintes du problème.
               </p>
              
             </div>
-            <div class="row">
-              <h5>Conclusion</h5>
-              <p class="paddingside2">
-       
-            La programmation dynamique est une technique puissante pour optimiser les calculs récursifs en évitant les redondances grâce à la mémoïsation. Elle est particulièrement utile pour des problèmes comme la suite de Fibonacci où les sous-problèmes se chevauchent.
-              </p>
-            </div>
+         
           </div><!-- fin tabpane 2-->
             </div><!-- fin tabcontent-->
           </div><!-- fin container-->
@@ -390,11 +370,22 @@ Le coût en espace peut être optimisé en ne stockant que les résultats néces
 
 
           <div class="btn-wrap">
-            <a href="https://capytale2.ac-paris.fr/web/c/7573-6265169" class="btn-buy">Y aller</a>
+            <a href="https://capytale2.ac-paris.fr/web/c/d88a-6296489" class="btn-buy">Y aller</a>
           </div>
         </div>
       </div>
-      
+      <div class="col-lg-3 col-md-6">
+        <div class="box" data-aos="zoom-in">
+          <h3>Le TP</h3>
+          <ul> Sur Capytale
+          </ul>
+
+
+          <div class="btn-wrap">
+            <a href="https://capytale2.ac-paris.fr/web/c/5c40-6296524" class="btn-buy">Y aller</a>
+          </div>
+        </div>
+      </div>
 
       <div class="section-title" data-aos="zoom-out">
         <h3 id="pj">Pièces jointes</h3>
