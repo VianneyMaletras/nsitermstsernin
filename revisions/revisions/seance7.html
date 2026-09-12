@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Listes : parcours, construction, recherche séquentielle
+  <title>Traitement de données en tables
   </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -60,8 +60,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
-
-      <li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
+<li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
                
                 <ul>
                   <li class="dropdown"><a href="./seance1.html"><span>Variables, types et structures de contrôle</span> <i class="bi bi-chevron-right"></i></a></li>
@@ -100,7 +99,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Listes : parcours, construction, recherche séquentielle</h2>
+          <h2 class="animate__animated animate__fadeInDown">Traitement de données en tables</h2>
         </div>
       </div> <!---->
 
@@ -116,7 +115,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-chart-diagram"></i>
-              <h4 class="d-none d-lg-block">Listes</h4>
+              <h4 class="d-none d-lg-block">Tables de données</h4>
             </a>
           </li>
 
@@ -131,9 +130,10 @@
                   <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i>À&nbsp;retenir</div>
                   <div class="box-content">
                     <p class="paddingside2 justifier">
-                      Une <strong>liste</strong> est une suite de valeurs numérotées à partir de 0. On la parcourt
-                      avec <code>for element in liste</code> pour lire, ou avec <code>for i in range(len(liste))</code>
-                      quand on doit <strong>modifier</strong> les éléments par leur index.
+                      Une <strong>table</strong> se représente en Python comme une <strong>liste de
+                      dictionnaires</strong> : chaque ligne est un dictionnaire, les <strong>clés</strong>
+                      correspondent aux colonnes. Importée depuis un CSV, toute valeur est une
+                      <strong>chaîne de caractères</strong>, même les nombres.
                     </p>
                   </div>
                 </div><!-- fin box warning-->
@@ -143,40 +143,38 @@
                 <h4> Exemple</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
-
-for i in range(len(notes)):
-    notes[i] = notes[i] + 1
-
-print(notes)   # [13, 9, 16, 11]</code></pre>
+                    <code class="langage-python">table = [
+    {"nom": "Léa", "classe": "TG1", "note": 15},
+    {"nom": "Tom", "classe": "TG2", "note": 8}
+]
+print(table[0]["nom"])   # "Léa"</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row paddingbottom20">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Compréhension de liste</h4>
-                Une <strong>compréhension</strong> (<code>[expression for x in liste if condition]</code>) construit
-                une nouvelle liste en une seule ligne, sans modifier la liste d'origine.
+                <h4>Rechercher et trier</h4>
+                <strong>Rechercher</strong>, c'est filtrer les lignes vérifiant un critère (<code>and</code>/<code>or</code>).
+                <strong>Trier</strong> une table se fait sur une colonne précise avec <code>sorted(..., key=...)</code>.
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
                 <h4>Application</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
-notes_validees = [n for n in notes if n >= 10]
-print(notes_validees)   # [12, 15, 10]</code></pre>
+                    <code class="langage-python">resultat = [l for l in table if l["note"] >= 10]
+table_triee = sorted(table, key=lambda l: l["note"])</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Recherche séquentielle</h4>
-                Une <strong>recherche séquentielle</strong> compare les éléments un par un. Un
-                <strong>arrêt anticipé</strong> évite un travail inutile — sauf pour compter les occurrences.
-                Dans le pire cas, son <strong>coût est linéaire</strong>.
+                <h4>Fusionner deux tables</h4>
+                <strong>Fusionner</strong> deux tables consiste à combiner leurs colonnes pour les lignes qui
+                partagent une même valeur dans une colonne commune (une <strong>clé</strong>) — attention aux
+                doublons et aux lignes sans correspondance.
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
@@ -184,11 +182,10 @@ print(notes_validees)   # [12, 15, 10]</code></pre>
                 <h4>Exemple</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">def rechercher_nom(carnet, nom):
-    for contact in carnet:
-        if contact == nom:
-            return True   # arrêt anticipé
-    return False</code></pre>
+                    <code class="langage-python">for l1 in notes:
+    for l2 in classes:
+        if l1["nom"] == l2["nom"]:
+            fusion.append({**l1, **l2})</code></pre>
                 </div>
 
               </div><!-- fin col-->

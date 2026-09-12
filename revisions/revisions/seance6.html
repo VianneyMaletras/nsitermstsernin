@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Listes : parcours, construction, recherche séquentielle
+  <title>Spécifier, tester, déboguer un programme
   </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -61,7 +61,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
 
-      <li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
                
                 <ul>
                   <li class="dropdown"><a href="./seance1.html"><span>Variables, types et structures de contrôle</span> <i class="bi bi-chevron-right"></i></a></li>
@@ -100,7 +100,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Listes : parcours, construction, recherche séquentielle</h2>
+          <h2 class="animate__animated animate__fadeInDown">Spécifier, tester, déboguer un programme</h2>
         </div>
       </div> <!---->
 
@@ -116,7 +116,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-chart-diagram"></i>
-              <h4 class="d-none d-lg-block">Listes</h4>
+              <h4 class="d-none d-lg-block">Débogage</h4>
             </a>
           </li>
 
@@ -131,9 +131,10 @@
                   <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i>À&nbsp;retenir</div>
                   <div class="box-content">
                     <p class="paddingside2 justifier">
-                      Une <strong>liste</strong> est une suite de valeurs numérotées à partir de 0. On la parcourt
-                      avec <code>for element in liste</code> pour lire, ou avec <code>for i in range(len(liste))</code>
-                      quand on doit <strong>modifier</strong> les éléments par leur index.
+                      <strong>Spécifier</strong> une fonction, c'est écrire sa <strong>précondition</strong> (ce
+                      qu'elle attend) et sa <strong>postcondition</strong> (ce qu'elle garantit). Un
+                      <strong>jeu de tests</strong> vérifie cette spécification sur au moins un cas nominal et un
+                      cas limite — mais un test qui passe ne prouve rien au-delà des cas testés.
                     </p>
                   </div>
                 </div><!-- fin box warning-->
@@ -143,52 +144,55 @@
                 <h4> Exemple</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
+                    <code class="langage-python">def moyenne(notes):
+    if len(notes) == 0:
+        return 0
+    return sum(notes) / len(notes)
 
-for i in range(len(notes)):
-    notes[i] = notes[i] + 1
-
-print(notes)   # [13, 9, 16, 11]</code></pre>
+assert moyenne([10, 20]) == 15   # cas nominal
+assert moyenne([]) == 0          # cas limite</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row paddingbottom20">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Compréhension de liste</h4>
-                Une <strong>compréhension</strong> (<code>[expression for x in liste if condition]</code>) construit
-                une nouvelle liste en une seule ligne, sans modifier la liste d'origine.
+                <h4>Familles de bugs classiques</h4>
+                Erreur de <strong>typage</strong>, <strong>effet de bord</strong> non désiré, <strong>débordement</strong>
+                dans un tableau, <strong>condition non exhaustive</strong>, mauvaise <strong>comparaison de
+                flottants</strong>, ou <strong>mauvais nommage</strong>.
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
                 <h4>Application</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
-notes_validees = [n for n in notes if n >= 10]
-print(notes_validees)   # [12, 15, 10]</code></pre>
+                    <code class="langage-python">a = 0.1 + 0.2
+print(a == 0.3)              # False !
+print(abs(a - 0.3) < 1e-9)   # True (comparaison fiable)</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Recherche séquentielle</h4>
-                Une <strong>recherche séquentielle</strong> compare les éléments un par un. Un
-                <strong>arrêt anticipé</strong> évite un travail inutile — sauf pour compter les occurrences.
-                Dans le pire cas, son <strong>coût est linéaire</strong>.
+                <h4>Déboguer méthodiquement</h4>
+                Face à un bug : 1) relire la spécification, 2) relancer les tests, 3) identifier la famille du
+                bug, 4) corriger, 5) retester. Ne jamais corriger "au hasard".
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
 
-                <h4>Exemple</h4>
+                <h4>Exemple de bug</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">def rechercher_nom(carnet, nom):
-    for contact in carnet:
-        if contact == nom:
-            return True   # arrêt anticipé
-    return False</code></pre>
+                    <code class="langage-python">def note_vers_mention(note):
+    if note >= 16:
+        return "très bien"
+    if note >= 14:
+        return "bien"
+    # bug : condition non exhaustive,
+    # aucun cas ne gère note < 14 !</code></pre>
                 </div>
 
               </div><!-- fin col-->

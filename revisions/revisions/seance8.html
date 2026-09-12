@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Listes : parcours, construction, recherche séquentielle
+  <title>Représentation binaire et hexadécimale
   </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -61,7 +61,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
 
-      <li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
+        <li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
                
                 <ul>
                   <li class="dropdown"><a href="./seance1.html"><span>Variables, types et structures de contrôle</span> <i class="bi bi-chevron-right"></i></a></li>
@@ -100,7 +100,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Listes : parcours, construction, recherche séquentielle</h2>
+          <h2 class="animate__animated animate__fadeInDown">Représentation binaire et hexadécimale</h2>
         </div>
       </div> <!---->
 
@@ -116,7 +116,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-chart-diagram"></i>
-              <h4 class="d-none d-lg-block">Listes</h4>
+              <h4 class="d-none d-lg-block">Binaire / Hexa</h4>
             </a>
           </li>
 
@@ -131,9 +131,9 @@
                   <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i>À&nbsp;retenir</div>
                   <div class="box-content">
                     <p class="paddingside2 justifier">
-                      Une <strong>liste</strong> est une suite de valeurs numérotées à partir de 0. On la parcourt
-                      avec <code>for element in liste</code> pour lire, ou avec <code>for i in range(len(liste))</code>
-                      quand on doit <strong>modifier</strong> les éléments par leur index.
+                      Un ordinateur ne connaît que 0 et 1 : c'est la <strong>base 2</strong> (binaire). L'
+                      <strong>hexadécimal</strong> (base 16, chiffres 0-9 puis A-F) est pratique car un chiffre
+                      hexadécimal représente exactement un groupe de <strong>4 bits</strong>.
                     </p>
                   </div>
                 </div><!-- fin box warning-->
@@ -143,40 +143,35 @@
                 <h4> Exemple</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
-
-for i in range(len(notes)):
-    notes[i] = notes[i] + 1
-
-print(notes)   # [13, 9, 16, 11]</code></pre>
+                    <code class="langage-python">print(bin(13))    # '0b1101'
+print(hex(13))    # '0xd'
+print(int("1101", 2))   # 13</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row paddingbottom20">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Compréhension de liste</h4>
-                Une <strong>compréhension</strong> (<code>[expression for x in liste if condition]</code>) construit
-                une nouvelle liste en une seule ligne, sans modifier la liste d'origine.
+                <h4>Nombre de bits nécessaires</h4>
+                Avec n bits, on représente 2ⁿ valeurs (de 0 à 2ⁿ − 1). Le nombre de bits nécessaires pour un
+                entier n'est pas ce nombre lui-même : 8 (<code>1000</code>) nécessite seulement 4 bits.
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
                 <h4>Application</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
-notes_validees = [n for n in notes if n >= 10]
-print(notes_validees)   # [12, 15, 10]</code></pre>
+                    <code class="langage-python">print(len(bin(255)) - 2)   # 8 bits
+print(len(bin(256)) - 2)   # 9 bits</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Recherche séquentielle</h4>
-                Une <strong>recherche séquentielle</strong> compare les éléments un par un. Un
-                <strong>arrêt anticipé</strong> évite un travail inutile — sauf pour compter les occurrences.
-                Dans le pire cas, son <strong>coût est linéaire</strong>.
+                <h4>Complément à 2</h4>
+                Pour représenter un entier <strong>négatif</strong> sur un nombre fixe de bits, on
+                <strong>inverse tous les bits</strong> de la valeur positive, puis on <strong>ajoute 1</strong>.
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
@@ -184,11 +179,10 @@ print(notes_validees)   # [12, 15, 10]</code></pre>
                 <h4>Exemple</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">def rechercher_nom(carnet, nom):
-    for contact in carnet:
-        if contact == nom:
-            return True   # arrêt anticipé
-    return False</code></pre>
+Représenter -5 sur 8 bits :
+1. 5      -> 00000101
+2. inversé -> 11111010
+3. +1      -> 11111011  (= -5)</pre>
                 </div>
 
               </div><!-- fin col-->
