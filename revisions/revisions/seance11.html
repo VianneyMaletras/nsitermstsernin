@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Listes : parcours, construction, recherche séquentielle
+  <title>Algorithmes gloutons
   </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -61,7 +61,7 @@
         <ul>
           <li><a class="nav-link scrollto active" href="../../index.html">Accueil</a></li>
 
-      <li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
+          <li class="dropdown"><a href="#"><span>Révisions</span> <i class="bi bi-chevron-down"></i></a>
                
                 <ul>
                   <li class="dropdown"><a href="./seance1.html"><span>Variables, types et structures de contrôle</span> </a></li>
@@ -102,7 +102,7 @@
       <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Listes : parcours, construction, recherche séquentielle</h2>
+          <h2 class="animate__animated animate__fadeInDown">Algorithmes gloutons</h2>
         </div>
       </div> <!---->
 
@@ -118,7 +118,7 @@
           <li class="nav-item col-3" data-aos="zoom-in">
             <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
               <i class="fa-solid fa-chart-diagram"></i>
-              <h4 class="d-none d-lg-block">Listes</h4>
+              <h4 class="d-none d-lg-block">Gloutons</h4>
             </a>
           </li>
 
@@ -133,9 +133,9 @@
                   <div class="box-label warningbglabel"><i class="fa-fw fas fa-volume-up"></i>À&nbsp;retenir</div>
                   <div class="box-content">
                     <p class="paddingside2 justifier">
-                      Une <strong>liste</strong> est une suite de valeurs numérotées à partir de 0. On la parcourt
-                      avec <code>for element in liste</code> pour lire, ou avec <code>for i in range(len(liste))</code>
-                      quand on doit <strong>modifier</strong> les éléments par leur index.
+                      Un algorithme <strong>glouton</strong> fait, à chaque étape, le choix qui semble le
+                      meilleur <strong>sur l'instant</strong>, sans jamais revenir en arrière. Pour le
+                      <strong>rendu de monnaie</strong>, on prend toujours la plus grande pièce possible.
                     </p>
                   </div>
                 </div><!-- fin box warning-->
@@ -145,52 +145,57 @@
                 <h4> Exemple</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
+                    <code class="langage-python">def rendre_monnaie(somme, pieces):
+    rendu = []
+    for piece in sorted(pieces, reverse=True):
+        while somme >= piece:
+            rendu.append(piece)
+            somme = somme - piece
+    return rendu
 
-for i in range(len(notes)):
-    notes[i] = notes[i] + 1
-
-print(notes)   # [13, 9, 16, 11]</code></pre>
+print(rendre_monnaie(6, [1, 2, 5]))   # [5, 1]</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row paddingbottom20">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Compréhension de liste</h4>
-                Une <strong>compréhension</strong> (<code>[expression for x in liste if condition]</code>) construit
-                une nouvelle liste en une seule ligne, sans modifier la liste d'origine.
+                <h4>Le sac à dos</h4>
+                Pour le <strong>sac à dos</strong>, on choisit les objets par <strong>valeur décroissante</strong>
+                (ou par rapport valeur/poids), tant qu'ils rentrent dans la capacité restante.
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
                 <h4>Application</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">notes = [12, 8, 15, 10]
-notes_validees = [n for n in notes if n >= 10]
-print(notes_validees)   # [12, 15, 10]</code></pre>
+                    <code class="langage-python">def sac_a_dos_glouton(objets, capacite):
+    objets_tries = sorted(objets, key=lambda o: o["valeur"], reverse=True)
+    choisis, poids_total = [], 0
+    for objet in objets_tries:
+        if poids_total + objet["poids"] <= capacite:
+            choisis.append(objet)
+            poids_total += objet["poids"]
+    return choisis</code></pre>
                 </div>
 
               </div><!-- fin col-->
             </div><!--fin row-->
             <div class="row">
               <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0 justifier">
-                <h4>Recherche séquentielle</h4>
-                Une <strong>recherche séquentielle</strong> compare les éléments un par un. Un
-                <strong>arrêt anticipé</strong> évite un travail inutile — sauf pour compter les occurrences.
-                Dans le pire cas, son <strong>coût est linéaire</strong>.
+                <h4>Les limites du glouton</h4>
+                Un algorithme glouton <strong>n'est pas toujours optimal</strong> : il fonctionne pour certains
+                problèmes (système de pièces euro), mais peut échouer sur d'autres.
 
               </div><!-- fin col-->
               <div class="col-lg-6 order-2 order-lg-2 justifier">
 
-                <h4>Exemple</h4>
+                <h4>Contre-exemple</h4>
                 <div class=" theme-atom-one-dark shadow-3xl text-sm relative overflow-hidden max-w-full tab-size h-full">
                   <pre>
-                    <code class="langage-python">def rechercher_nom(carnet, nom):
-    for contact in carnet:
-        if contact == nom:
-            return True   # arrêt anticipé
-    return False</code></pre>
+                    <code class="langage-python">print(rendre_monnaie(6, [1, 3, 4]))
+# [4, 1, 1] : 3 pièces
+# alors que [3, 3] fait mieux : 2 pièces !</code></pre>
                 </div>
 
               </div><!-- fin col-->
